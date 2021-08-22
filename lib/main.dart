@@ -21,6 +21,7 @@ class HisnulMuslim extends StatelessWidget {
       return FavProvider();
     },
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: MainScreen(),
         theme: theme(),
       )
