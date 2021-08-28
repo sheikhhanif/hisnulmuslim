@@ -76,7 +76,7 @@ class _MainScreenState extends State<MainScreen> {
         });
       },
       items: [
-        BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Favorite"),
+        BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Favorites"),
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         BottomNavigationBarItem(icon: Icon(Icons.list), label: "Duas"),
 

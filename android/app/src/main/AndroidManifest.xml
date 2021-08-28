@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hisnulmuslim">
     <application
-        android:label="Hisnul\nMuslim"
+        android:label="Hisnul Muslim | Dua and Azkar"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

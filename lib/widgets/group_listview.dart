@@ -31,8 +31,7 @@ class GroupListView extends StatelessWidget {
                             )
                         ),
                         decoration: new BoxDecoration (
-                            borderRadius: new BorderRadius.all(new Radius.circular(100.0)),
-
+                            shape: BoxShape.circle,
                             color: Colors.black12
                         ),
                       ),
@@ -42,7 +41,7 @@ class GroupListView extends StatelessWidget {
                           Expanded(
                             child: Text(
                               duas[index].name,
-                              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                               maxLines: 3,
                               textDirection: TextDirection.ltr,
                             ),

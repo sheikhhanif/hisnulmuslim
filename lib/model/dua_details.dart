@@ -1,8 +1,6 @@
-import 'package:hisnulmuslim/model/dua_group.dart';
-
 class DContent{
   int id,gid;
-  final String ar_dua, en_trans, en_ref, subtitle;
+  final String ar_dua, en_trans, en_ref, subtitle,audio;
 
   DContent({
     required this.id,
@@ -10,7 +8,8 @@ class DContent{
     this.ar_dua = "",
     this.en_trans = "",
     this.en_ref = '',
-    this.subtitle = 'This is a subtitle'
+    this.subtitle = '',
+    this.audio = '',
   });
 
   Map toJson() => {
@@ -19,7 +18,8 @@ class DContent{
     'ar_dua': ar_dua,
     'en_trans': en_trans,
     'en_ref': en_ref,
-    'subtitle': subtitle
+    'subtitle': subtitle,
+    'audio': audio
   };
 
   DContent.fromJson(Map json) :
@@ -28,14 +28,16 @@ class DContent{
     ar_dua = json['ar_dua'],
     en_trans = json['en_trans'],
     en_ref = json['en_ref'],
-    subtitle = json['subtitle'];
+    subtitle = json['subtitle'],
+    audio = json['audio'];
 }
 
 List<DContent> duaContent = [
 
 
   DContent(
-    subtitle: duaData[0].name +' #1',
+    subtitle: "Upon waking up #1",
+    audio: "1hm.mp3",
     id: 1,
     gid: 1,
     ar_dua: """اَلحَمدُ لِلهِ الَّذِي أحيَانَا بَعْدَ مَا أمَاتَنَا وَ إِلَيهِ النُّشُورُ""",
@@ -44,7 +46,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[0].name +' #2',
+    subtitle: "Upon waking up #2",
+    audio: "2hm.mp3",
     id: 2,
     gid: 1,
     ar_dua: """لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الحَمدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، سُبْحاَنَ اللهِ، وَالحَمدُ للهِ، وَلَا إِلَهَ إِلَّا اللهُ وَاللهُ أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ، رَبِّ اغْفِرْ لِي""",
@@ -53,7 +56,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[0].name +' #3',
+    subtitle: "Upon waking up #3",
+    audio: "3hm.mp3",
     id: 3,
     gid: 1,
     ar_dua: """الحَمدُ لِلهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ""",
@@ -62,7 +66,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[0].name +' #4',
+    subtitle: "Upon waking up #4",
+    audio: "4hm.mp3",
     id: 4,
     gid: 1,
     ar_dua: """يقرأ سورة آل عمران ٣: ١٩٠-٢٠٠""",
@@ -71,7 +76,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[1].name,
+    subtitle: "Supplication when wearing clothes ",
+    audio: "5hm.mp3",
     id: 5,
     gid: 2,
     ar_dua: """اَلحَمدُ لِلهِ الَّذِي كَسَانِي هَذَا (الثَّوْبَ) وَرَزَقَنِيهِ مِنْ غَيْرِ حَولٍ مِنِّي وَ لَا قُوَّةٍ""",
@@ -80,7 +86,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[2].name,
+    subtitle: "Supplication when wearing new clothes ",
+    audio: "6hm.mp3",
     id: 6,
     gid: 3,
     ar_dua: """اللَّهُمَّ لَكَ الحَمدُ أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشِّرِ مَا صُنِعَ لَهُ""",
@@ -89,7 +96,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[3].name +' #1',
+    subtitle: "Supplication said to someone wearing new clothes #1",
+    audio: "7hm.mp3",
     id: 7,
     gid: 4,
     ar_dua: """تُبْلِي وَيُخْلِفُ اللهُ تَعَالَى""",
@@ -98,7 +106,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[3].name +' #2',
+    subtitle: "Supplication said to someone wearing new clothes #2",
+    audio: "8hm.mp3",
     id: 8,
     gid: 4,
     ar_dua: """إِلبَسْ جَدِيداً، وَعِشْ حَمِيداً، وَمُتْ شَهِيداً""",
@@ -107,7 +116,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[4].name,
+    subtitle: "Before Undressing ",
+    audio: "9hm.mp3",
     id: 9,
     gid: 5,
     ar_dua: """بِسْمِ اللهِ""",
@@ -116,7 +126,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[5].name,
+    subtitle: "Before entering the toilet ",
+    audio: "10hm.mp3",
     id: 10,
     gid: 6,
     ar_dua: """(بِسْمِ اللهِ) اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبْثِ وَالْخَبَائِثِ""",
@@ -125,7 +136,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[6].name,
+    subtitle: "After leaving the toilet ",
+    audio: "11hm.mp3",
     id: 11,
     gid: 7,
     ar_dua: """غُفْرَانَكَ""",
@@ -134,7 +146,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[7].name,
+    subtitle: "When starting ablution (wudu') ",
+    audio: "12hm.mp3",
     id: 12,
     gid: 8,
     ar_dua: """بِسْمِ اللهِ""",
@@ -143,7 +156,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[8].name +' #1',
+    subtitle: "Upon completing ablution (wudu') #1",
+    audio: "13hm.mp3",
     id: 13,
     gid: 9,
     ar_dua: """أَشْهَدُ أَنْ لَّا إِلَهَ إِلَّا اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ""",
@@ -152,7 +166,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[8].name +' #2',
+    subtitle: "Upon completing ablution (wudu') #2",
+    audio: "14hm.mp3",
     id: 14,
     gid: 9,
     ar_dua: """اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ، وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ""",
@@ -161,7 +176,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[8].name +' #3',
+    subtitle: "Upon completing ablution (wudu') #3",
+    audio: "15hm.mp3",
     id: 15,
     gid: 9,
     ar_dua: """سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيكَ""",
@@ -170,7 +186,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[9].name +' #1',
+    subtitle: "When leaving home #1",
+    audio: "16hm.mp3",
     id: 16,
     gid: 10,
     ar_dua: """بِسْمِ اللهِ، تَوَكَّلْتُ عَلَى اللهِ، وَلاَحَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ""",
@@ -179,7 +196,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[9].name +' #2',
+    subtitle: "When leaving home #2",
+    audio: "17hm.mp3",
     id: 17,
     gid: 10,
     ar_dua: """اللَّهُمَّ إِنَّي أَعْوْذُ بِكَ أَنْ أَضِلَّ، أَوْ أُضِلَّ، أَوْ أَزِلَّ، أُوْ أُزَلَّ أَوْ أَظْلِمَ، أَوْ أُظْلَمَ، أَوْ أَجْهَلَ، أَوْ يُجْهَلَ عَلَيَّ""",
@@ -188,7 +206,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[10].name,
+    subtitle: "Upon entering home ",
+    audio: "18hm.mp3",
     id: 18,
     gid: 11,
     ar_dua: """بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى اللهِ رَبَّنَا تَوَكَّلْنَا""",
@@ -197,7 +216,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[11].name,
+    subtitle: "Supplication when going to the masjid ",
+    audio: "19hm.mp3",
     id: 19,
     gid: 12,
     ar_dua: """اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُوْراً، وَفِي لِسَانِي نُوْراً، وَ فِي سَمْعِي نُوْراً، وَ فِي بَصَري نُوْراً، وَ مِنْ فَوقِي نُوْراً، وَمِنْ تحْتِي نُوْراً، وَعَنْ يَمِيْنِي نُوْراً، وَ عَنْ شِمَالِي  نُوْراً، وَ مِنْ أَمَامِي نُوْراً، وَ مِنْ خَلْفِي نُوراً، واجْعَلْ فِي نَفْسِي نُوراً، وَ أعْظِمْ لي نُوراً، وَ عَظِّمْ لي نُوراً، وَاجْعَلْ لي نُوراً، وَاجْعَلْنِي نُوراً، اللهم أَعْطِنِي نُوراً، وَاجْعَلْ في عَصَبِي نُوراً، وَ في لَحْمِي نُوراً، وَ في دَمِي نُوراً، وَ في شَعْرِي نُوراً، وَ في بَشَرِي نُوراً<sup><small>(١)</small></sup>.
@@ -211,7 +231,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[12].name,
+    subtitle: "Upon entering the masjid ",
+    audio: "20hm.mp3",
     id: 20,
     gid: 13,
     ar_dua: """(يَبْدَأُ بِرِجْلِهِ اليُمْنَى)<sup><small>(١)</small></sup>، ويقول: (أَعُوْذُ بِاللَّهِ الْعَظِيمِ، وَبِوَجْهِهِ الْكَرِيمِ، وَسُلْطَانِهِ الْقَدِيمِ، مِنَ الشَّيْطَانِ الرَّجِيمِ)<sup><small>(٢)</small></sup>، (بِسْمِ اللَّهِ, وَالصَّلاةُ)<sup><small>(٣)</small></sup>. [وَالسَّلامُ عَلَى رَسُوْلِ اللَّهِ]<sup><small>(٤)</small></sup>، (اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ)<sup><small>(٥)</small></sup>.""",
@@ -224,7 +245,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[13].name,
+    subtitle: "Upon leaving the masjid ",
+    audio: "21hm.mp3",
     id: 21,
     gid: 14,
     ar_dua: """(يَبْدَأُ بِرِجْلِهِ الْيُسْرَى)<sup><small>(١)</small></sup>، وَ يَقُولُ: (بِسْمِ اللهِ وَ الصَّلاةُ وَالسَّلامُ عَلَى رَسُولِ اللهِ، اللهم إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ، اللهم اعْصِمْنِي مِنَ الشَّيْطَانِ الرَّجِيْمِ)<sup><small>(٢)</small></sup>. """,
@@ -234,7 +256,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[14].name +' #1',
+    subtitle: "Supplications related to the Athân (call to prayer) #1",
+    audio: "22hm.mp3",
     id: 22,
     gid: 15,
     ar_dua: """يَقُولُ مِثْلَ مَا يَقُولُ المُؤَذِّنُ إلَّا فِي «حَيَّ عَلَى الصَّلاةِ» وَ «حَيَّ عَلَى الفَلاحِ» فَيَقُولُ: «لَا حَولَ وَ لَا قُوَّةَ إلَّا بِاللهِ».""",
@@ -243,7 +266,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[14].name +' #2',
+    subtitle: "Supplications related to the Athân (call to prayer) #2",
+    audio: "23hm.mp3",
     id: 23,
     gid: 15,
     ar_dua: """يَقُولُ: «وَ أَنَا أَشْهَدُ أَنْ لَا إله إلَّا اللهُ وَ حْدَهُ لَا شَرِيْكَ لَهُ، وَ أَنَّ مُحَمَّداً عَبْدُهُ وَ رَسُولُهُ، رَضِيْتُ بِاللهِ رَبًّا، وَ بِمُحَمَّدٍ رَسُولًا، وَ بِالإِسْلامِ دِيْنًا»<sup><small>(١)</small></sup> «يَقُولَ ذَلِكَ عَقِبَ تَشَهُّدِ المُؤَذِّنِ»<sup><small>(٢)</small></sup>.""",
@@ -255,7 +279,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[14].name +' #3',
+    subtitle: "Supplications related to the Athân (call to prayer) #3",
+    audio: "",
     id: 24,
     gid: 15,
     ar_dua: """يُصَلِّي عَلَى النَّبِي صلى الله عليه وسلم بَعْدَ فَرَاغِهِ مِنْ إِجَابَةِ المُؤَذِّنِ.""",
@@ -264,7 +289,8 @@ List<DContent> duaContent = [
   ),
 
   DContent(
-    subtitle: duaData[14].name +' #4',
+    subtitle: "Supplications related to the Athân (call to prayer) #4",
+    audio: "25hm.mp3",
     id: 25,
     gid: 15,
     ar_dua: """يَقُولُ: «اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ ، وَالصَّلاةِ القَائِمَةِ ، آتِ مُحَمَّداً الوَسِيْلَةَ وَالفَضِيْلَةَ ، وَابْعَثْهُ مَقَاماً مَحْمُوْداً الَّذِي وَعَدْتَهُ ، [إِنَّكَ لاَ تُخْلِفُ الْمِيعَادِ] »""",
@@ -275,7 +301,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[14].name +' #5',
+    subtitle: "Supplications related to the Athân (call to prayer) #5",
+    audio: "",
     id: 26,
     gid: 15,
     ar_dua: """يَدْعُو لِنَفْسِهِ بَيْنَ الأَذَانِ وَالإِقَامَةِ؛ فَإنَّ الدُّعَاءَ حِيْنَئذٍ لَا يُرَدُّ.""",
@@ -284,7 +311,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[15].name +' #1',
+    subtitle: "Supplications at the start of Ŝalâh (prayer) #1",
+    audio: "27hm.mp3",
     id: 27,
     gid: 16,
     ar_dua: """اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ، اللَّهُمَّ نَقِّنِي مِنْ خَطَايَايَ، كَمَا يُنَقَّى الثَّوْبُ الأَبْيَضُ مِنَ الدَّنَسِ، اللَّهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ، بِالثَّلْجِ وَالْمَاءِ وَالْبَرَدِ.""",
@@ -293,7 +321,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[15].name +' #2',
+    subtitle: "Supplications at the start of Ŝalâh (prayer) #2",
+    audio: "28hm.mp3",
     id: 28,
     gid: 16,
     ar_dua: """سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلاَ إِلَهَ غَيْرُكَ.""",
@@ -303,7 +332,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[15].name +' #3',
+    subtitle: "Supplications at the start of Ŝalâh (prayer) #3",
+    audio: "29hm.mp3",
     id: 29,
     gid: 16,
     ar_dua: """وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَوَاتِ وَالأَرْضَ حَنِيفاً وَمَا أَنَا مِنَ الْمُشْرِكِينَ، إِنَّ صَلاتِي، وَنُسُكِي، وَمَحْيَايَ, وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ، لاَ شَرِيكَ لَهُ، وَبِذَلِكَ أُمِرْتُ وَأَنَا مِنَ الْمُسْلِمِينَ. اللَّهُمَّ أَنْتَ الْمَلِكُ لاَ إِلَهَ إِلاَّ أَنْتَ، أَنْتَ رَبِّي، وَأَنَا عَبْدُكَ، ظَلَمْتُ نَفْسِي، وَاعْتَرَفْتُ بِذَنْبِي فَاغْفِرْ لِي ذُنُوبِي جَمِيعاً إِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ، وَاهْدِنِي لأَحْسَنِ الأَخْلاقِ لا يَهْدِي لأَحْسَنِهَا إلاَّ أَنْتَ، وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ، لَبَّيْكَ وَسَعْدَيْكَ، وَالْخَيْرُ كُلُّهُ بِيَدَيْكَ، وَالشَّرُّ لَيْسَ إِلَيْكَ، أَنَا بِكَ وَإِلَيْكَ، تَبَارَكْتَ وَتَعَالَيْتَ، أَسْتَغْفِرُكَ وَأَتُوْبُ إِلَيْكَ.""",
@@ -312,7 +342,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[15].name +' #4',
+    subtitle: "Supplications at the start of Ŝalâh (prayer) #4",
+    audio: "30hm.mp3",
     id: 30,
     gid: 16,
     ar_dua: """اللهم رَبَّ جِبرَائِيْلَ، وَ مِيكَائيْلَ، وَإسْرَافيْلَ، فَاطِرَ السَّمَوَاتِ وَ الأرْضِ، عَالِمَ الغَيْبِ وَ الشَّهَادَةِ، أنْتَ تَحْكُمُ بَيْنَ عِبَادِكَ فِيمَا كَانُوا فِيهِ يَخْتَلِفُونَ، اهْدِنِي لِمَا اخْتُلِفَ فِيهِ مِنَ الحَقِّ بِإذْنِكَ، إنَّكَ تَهْدِي مَنْ تَشَاءُ إلَى صِرَاطٍ مُسْتَقِيمٍ.""",
@@ -321,7 +352,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[15].name +' #5',
+    subtitle: "Supplications at the start of Ŝalâh (prayer) #5",
+    audio: "31hm.mp3",
     id: 31,
     gid: 16,
     ar_dua: """اللهُ أكْبَرُ كَبِيراً، اللهُ أكْبَرُ كَبِيراً، اللهُ أكْبَرُ كَبِيراً، وَ الحَمْدُلِلَّهِ كَثِيراً، وَالحَمْدُلِلَّهِ كَثِيراً، وَالحَمْدُلِلَّهِ كَثِيراً، وَ سُبْحَانَ اللهِ بُكْرَةً وَأصِيلاً (ثَلاثًا) أعُوذ بِا اللهِ مِنَ الشَّيْطَانِ: مِنْ نَفْحِهِ وَ نَفْثِهِ، وَ هَمْزِهِ.""",
@@ -331,7 +363,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[15].name +' #6',
+    subtitle: "Supplications at the start of Ŝalâh (prayer) #6",
+    audio: "32hm.mp3",
     id: 32,
     gid: 16,
     ar_dua: """اللهم لَكَ الحَمْدُ أنْتَ نُورُ السَّمَوَاتِ و الأرْضِ وَ مَنْ فِيهِنَّ، وَ لَكَ الحَمْدُ أنْتَ قَيِّمُ السَّمَوَاتِ وَ الأرْضِ وَ مَنْ فِيهِنَّ، [وَ لَكَ الحَمْدُ أنْتَ رَبُّ السَّمَوَاتِ وَ الأرْضِ وَ مَنْ فِيهِنَّ] ، [وَ لَكَ الحَمْدُ لَكَ مُلْكُ السَّمَوَاتِ وَ الأرْضِ وَ مَنْ فِيهِنَّ][وَ لَكَ الحَمْدُ أنْتَ مَلِكُ السَّمَوَاتِ وَ الأرْضِ][وَ لَكَ الحَمْدُ][أنْتَ الحَقُّ، وَ وَعْدُكَ الحَقُّ، وَ قَولُكَ الحَقُّ، وَ لِقَاؤُكَ الحَقُّ، وَ الجَنَّةُ حَقٌّ، وَ النَّارُ حَقٌّ، وَ النَّبِيُّونَ حَقٌّ، وَ مُحَمَّدٌﷺ حَقٌّ، وَالسَّاعَةُ حَقٌّ][اللهم لَكَ أسْلَمْتُ، وَ عَلَيْكَ تَوَكَّلْتُ، وَ بِكَ آمَنْتُ، وَ إلَيْكَ أنَبْتُ، وَ بِكَ خَاصَمْتُ، وَ إلَيْكَ حَاكَمْتُ. فَاغْفِرْ لِي مَا قَدَّمْتُ، و أخَّرْتُ، وَ مَا أسْرَرْتُ، وَ مَا أعْلَنْتُ][أنْتَ المُقَدِّمُ، وَ أنْتَ المُؤَخِّرُ لَا إله إلَّا أنْتَ][أنْتَ إلَهِي لَا إله إلَّا أنْتَ].""",
@@ -341,7 +374,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[16].name +' #1',
+    subtitle: "While bowing in Ŝalâh (Rukû') #1",
+    audio: "33hm.mp3",
     id: 33,
     gid: 17,
     ar_dua: """سُبْحَانَ رَبِّيَ الْعَظِيمِ (ثلاثا) """,
@@ -350,7 +384,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[16].name +' #2',
+    subtitle: "While bowing in Ŝalâh (Rukû') #2",
+    audio: "34hm.mp3",
     id: 34,
     gid: 17,
     ar_dua: """سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ اللَّهُمَّ اغْفِرْلِي""",
@@ -359,7 +394,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[16].name +' #3',
+    subtitle: "While bowing in Ŝalâh (Rukû') #3",
+    audio: "35hm.mp3",
     id: 35,
     gid: 17,
     ar_dua: """سُبُّوحٌ، قُدُّوسٌ، رَبُّ المَلائِكَةِ وَالرُّوحِ.""",
@@ -368,7 +404,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[16].name +' #4',
+    subtitle: "While bowing in Ŝalâh (Rukû') #4",
+    audio: "36hm.mp3",
     id: 36,
     gid: 17,
     ar_dua: """اللَّهُمَّ لَكَ رَكَعْتُ ، وَبِكَ آمَنْتُ ، وَلَكَ أَسْلَمْتُ ، خَشَعَ لَكَ سَمْعِي ، وَبَصَرِي ، وَمُخِّي ، وَعَظْمِي ، وَعَصَبِي ، [وَمَا اسْتَقَلَّت بِهِ قَدَمِي]""",
@@ -377,7 +414,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[16].name +' 5',
+    subtitle: "While bowing in Ŝalâh (Rukû') #5",
+    audio: "37hm.mp3",
     id: 37,
     gid: 17,
     ar_dua: """سُبْحَانَ ذِي الْجَبَروتِ ، وَالْمَلَكُوتِ ، وَالكِبْرِيَاءِ ، وَالْعَظَمَةِ.""",
@@ -386,7 +424,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[17].name +' #1',
+    subtitle: "Upon rising from Rukû' (bowing position in Ŝalâh) #1",
+    audio: "38hm.mp3",
     id: 38,
     gid: 18,
     ar_dua: """سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ.""",
@@ -395,7 +434,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[17].name +' #2',
+    subtitle: "Upon rising from Rukû' (bowing position in Ŝalâh) #2",
+    audio: "39hm.mp3",
     id: 39,
     gid: 18,
     ar_dua: """رَبَّنَا وَلَكَ الْحَمْدُ حَمْداً كَثِيراً طَيِّباً مُبَارَكاً فِيهِ.""",
@@ -404,7 +444,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[17].name +' #3',
+    subtitle: "Upon rising from Rukû' (bowing position in Ŝalâh) #3",
+    audio: "40hm.mp3",
     id: 40,
     gid: 18,
     ar_dua: """مِلْءَ السَّمَوَاتِ وَمِلْءَ الأَرْضِ وَمَا بَيْنَهُمَا ، وَمِلْءَ مَا شِئْتَ مِنْ شَيْءٍ بَعْدُ ، أَهْلَ الثَّنَاءِ وَالْمَجْدِ ، أَحَقُّ مَا قَالَ الْعَبْدُ ، وَكُلُّنَا لَكَ عَبْدٌ ، اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ ، وَلَامُعْطِي لِمَا مَنَعْتَ ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ.""",
@@ -413,7 +454,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[18].name +' #1',
+    subtitle: "Supplications while in Sujûd (prostration in Ŝalâh) #1",
+    audio: "41hm.mp3",
     id: 41,
     gid: 19,
     ar_dua: """سُبْحَانَ رَبَّيَ الأَعْلَى (ثلاثا)""",
@@ -422,7 +464,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[18].name +' 2',
+    subtitle: "Supplications while in Sujûd (prostration in Ŝalâh) #2",
+    audio: "42hm.mp3",
     id: 42,
     gid: 19,
     ar_dua: """سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ اللَّهُمَّ اغْفِرْ لِي""",
@@ -431,7 +474,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[18].name +' 3',
+    subtitle: "Supplications while in Sujûd (prostration in Ŝalâh) #3",
+    audio: "43hm.mp3",
     id: 43,
     gid: 19,
     ar_dua: """سُبُّوحٌ، قُدُّوسٌ، رَبُّ المَلائِكَةِ وَالرُّوحِ""",
@@ -440,7 +484,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[18].name +' #4',
+    subtitle: "Supplications while in Sujûd (prostration in Ŝalâh) #4",
+    audio: "44hm.mp3",
     id: 44,
     gid: 19,
     ar_dua: """اللَّهُمَّ لَكَ سَجَدْتُ، وَبِكَ آمَنْتُ، وَلَكَ أَسْلَمْتُ، سَجَدَ وَجْهِي لِلَّذِي خَلَقَهُ، وَصَوَّرَهَ، وَشَقَّ سَمْعَهُ وَبَصَرَهُ، تَبَارَكَ اللَّهُ أَحْسَنُ الخَالِقِينَ""",
@@ -449,7 +494,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[18].name +' #5',
+    subtitle: "Supplications while in Sujûd (prostration in Ŝalâh) #5",
+    audio: "45hm.mp3",
     id: 45,
     gid: 19,
     ar_dua: """سُبْحَانَ ذِي الْجَبَرُوتِ، وَالْمَلَكُوتِ، وَالكِبْرِيَاءِ، وَالْعَظَمَةِ""",
@@ -458,7 +504,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[18].name +' #6',
+    subtitle: "Supplications while in Sujûd (prostration in Ŝalâh) #6",
+    audio: "46hm.mp3",
     id: 46,
     gid: 19,
     ar_dua: """اللًّهُمَّ اغْفِرْ لِي ذَنْبِي كُلَّهُ، دِقَّهُ وَجِلَّهُ، وَأَوَّلَهُ وَآخِرَهُ، وَعَلانِيَتَهُ وَسِرَّهُ""",
@@ -467,7 +514,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[18].name +' #7',
+    subtitle: "Supplications while in Sujûd (prostration in Ŝalâh) #7",
+    audio: "47hm.mp3",
     id: 47,
     gid: 19,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوْذُ بِرِضَاكَ مِنْ سَخَطِكَ، وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ، وَأَعُوْذُ بِكَ مِنْكَ، لاَ أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ""",
@@ -476,7 +524,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[19].name +' #1',
+    subtitle: "Supplications between sajdatain (two prostrations) #1",
+    audio: "48hm.mp3",
     id: 48,
     gid: 20,
     ar_dua: """رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي""",
@@ -485,7 +534,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[19].name +' #2',
+    subtitle: "Supplications between sajdatain (two prostrations) #2",
+    audio: "49hm.mp3",
     id: 49,
     gid: 20,
     ar_dua: """اللَّهُمَّ اغْفِرْ لِي، وَارْحَمْنِي، وَاهْدِنِي، وَاجْبُرْنِي، وَعَافِنِي، وَارْزُقْنِي، وَارْفَعْنِي""",
@@ -494,7 +544,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[20].name +' #1',
+    subtitle: "Supplication for Sajdah (prostration) due to recitation of Qur'an #1",
+    audio: "50hm.mp3",
     id: 50,
     gid: 21,
     ar_dua: """سَجَدَ وَجْهِي لِلَّذِي خَلَقَهُ، وَشَقَّ سَمْعَهُ وَبَصَرَهُ، بِحَوْلِهِ وَقُوَّتِهِ (فَتَبَارَكَ اللَّهُ أَحْسَنُ الْخَالِقِينَ)""",
@@ -503,7 +554,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[20].name +' #2',
+    subtitle: "Supplication for Sajdah (prostration) due to recitation of Qur'an #2",
+    audio: "51hm.mp3",
     id: 51,
     gid: 21,
     ar_dua: """اللَّهُمَّ اكْتُبْ لِي بِهَا عِنْدَكَ أَجْراً، وَضَعْ عَنِّي بِهَا وِزْراً، وَاجْعَلْهَا لِي عِنْدَكَ ذُخْراً، وَتَقَبَّلَهَا مِنِّي كَمَا تَقَبَّلْتَهَا مِنْ عَبْدِكَ دَاوُدَ""",
@@ -512,7 +564,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[21].name,
+    subtitle: "Dua of Tashahhud ",
+    audio: "52hm.mp3",
     id: 52,
     gid: 22,
     ar_dua: """التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ، وَالطَّيِّبَاتُ، السَّلامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلامُ عَلَيْنَا وَعَلَى عِبَادِ اللهِ الصَّالِحِينَ،. أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ""",
@@ -521,7 +574,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[22].name +' #1',
+    subtitle: "Dua for the Prophet (salla Allaahu ʻalayhi wa salaam) after the Tashahhud #1",
+    audio: "53hm.mp3",
     id: 53,
     gid: 23,
     ar_dua: """اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ""",
@@ -530,7 +584,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[22].name +' 2',
+    subtitle: "Dua for the Prophet (salla Allaahu ʻalayhi wa salaam) after the Tashahhud #2",
+    audio: "54hm.mp3",
     id: 54,
     gid: 23,
     ar_dua: """اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ، وَبَارِكْ عَلَى مُحَمَّدٍ، وَ عَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ""",
@@ -539,7 +594,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #1',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #1",
+    audio: "55hm.mp3",
     id: 55,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وَمِنْ عَذَابِ جَهَنَّمَ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ""",
@@ -548,7 +604,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #2',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #2",
+    audio: "56hm.mp3",
     id: 56,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وأَعُوْذُ بِكَ مِنْ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ، وَأَعُوْذُ بِكَ مِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، اللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْمَأْثَمِ وَالْمَغْرَمِ""",
@@ -557,7 +614,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #3',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #3",
+    audio: "57hm.mp3",
     id: 57,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْماً كَثِيراً، وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرةً مِنْ عِنْدِكَ، وَارْحَمْني، إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ""",
@@ -566,7 +624,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name + ' #4',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #4",
+    audio: "58hm.mp3",
     id: 58,
     gid: 24,
     ar_dua: """اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ، وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ، وَمَا أَعْلَنْتُ، وَمَا أَسْرَفْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، أَنْتَ الْمُقَدِّمُ، وَأَنْتَ الْمُؤَخِّرُ لَا إِلَهَ إِلَّا أَنْتَ""",
@@ -575,7 +634,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #5',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #5",
+    audio: "59hm.mp3",
     id: 59,
     gid: 24,
     ar_dua: """اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ، وَشُكْرِكَ، وَحُسْنِ عِبَادَتِكَ""",
@@ -584,7 +644,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #6',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #6",
+    audio: "60hm.mp3",
     id: 60,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ البُخْلِ، وَأَعُوذُبِكَ مِنَ الْجُبْنِ، وَأَعُوْذُ بِكَ مِنْ أَنْ أُرَدَّ إِلَى أَرْذَلِ الْعُمُرِ، وَأَعُوْذُ بِكَ مِنْ فِتْنَةِ الدُّنْيَا، وَأعُوذُبِكَ مِنْ عَذَابِ الْقَبْرِ""",
@@ -593,7 +654,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #7',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #7",
+    audio: "61hm.mp3",
     id: 61,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ، وَأَعُوْذُ بِكَ مِنْ النَّارِ""",
@@ -602,7 +664,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #8',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #8",
+    audio: "62hm.mp3",
     id: 62,
     gid: 24,
     ar_dua: """اللَّهُمَّ بِعِلْمِكَ الْغَيْبَ وَقُدْرَتِكَ عَلَى الْخَلْقِ؛ أَحْيِنِي مَا عَلِمْتَ الْحَيَاةَ خَيْراً لِي، وَتَوَفَّنِي إِذَا عَلِمْتَ الْوَفَاةَ خَيْراً لِي، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ فِي الْغَيْبِ وَالشَّهَادَةِ، وَأَسْأَلُكَ كَلِمَةَ الْحَقِّ فِي الرِّضَا وَالْغَضَبِ، وَأَسْأَلُكَ الْقَصْدَ فِي الْغِنَى وَالْفَقْرِ، وَأَسْأَلُكَ نَعِيماً لاَ يَنْفَدُ، وَأَسْأَلُكَ قُرَّةَ عَيْنٍ لاَ تَنْقَطِعُ، وَأَسْأَلُكَ الرَّضَا بَعْدَ الْقَضَاءِ، وَأَسْأَلُكَ بَرْدَ الْعَيْشِ بَعْدَ الْمَوْتِ، وَأَسْأَلُكَ لَذَّةَ النَّظَرِ إِلَى وَجْهِكَ، وَالشَّوْقَ إِلَى لِقَائِكَ فِي غَيْرِ ضَرَّاءَ مُضِرَّةٍ، وَلَا فِتْنَةٍ مُضِلَّةٍ، اللَّهُمَّ زَيَّنَّا بِزِينَةِ الإِيمَانِ، وَاجْعَلْنَا هُدَاةً مُهْتَدِينَ""",
@@ -611,7 +674,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #9',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #9",
+    audio: "63hm.mp3",
     id: 63,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ يَا اللَّهُ بِأَنَّكَ الْوَاحِدُ الأَحَدُ الصَّمَدُ، الَّذِي لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُنْ لَهُ كُفُواً أَحَدٌ، أَنْ تَغْفِرَ لِي ذُنُوبِي، إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ""",
@@ -620,7 +684,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #10',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #10",
+    audio: "64hm.mp3",
     id: 64,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي أَسأَلُكَ بِأَنَّ لَكَ الْحَمْدُ، لَا إِلَهَ إِلَّا أَنْتَ، وَحْدَكَ لَا شَرِيكَ لَكَ، الْمَنَّانُ، يَا بَدِيْعَ السَّمَوَاتِ وَالأَرْضِ، يَاذَا الْجَلالِ وَالإكْرَامِ، يَاحَيُّ يَاقَيُّومُ، إِنِّي أَسْأَلُكَ الْجَنَّةَ، وَأَعُوْذُ بِكَ مِنَ النَّارِ""",
@@ -629,7 +694,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[23].name +' #11',
+    subtitle: "Supplication to be said after the last Tashahhud and before the Taslîm #11",
+    audio: "65hm.mp3",
     id: 65,
     gid: 24,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ بِأَنِّي أَشْهَدُ أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ، الأَحَدُ الصَّمَدُ الَّذِي لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُنْ لَهُ كُفُواً أَحَدٌ""",
@@ -638,7 +704,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #1',
+    subtitle: "Remembrance after the Taslîm #1",
+    audio: "66hm.mp3",
     id: 66,
     gid: 25,
     ar_dua: """(١) أَسْتَغْفِرُ اللَّهَ (ثلاثا)<br>
@@ -649,7 +716,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #2',
+    subtitle: "Remembrance after the Taslîm #2",
+    audio: "67hm.mp3",
     id: 67,
     gid: 25,
     ar_dua: """لَا إِلَهَ إلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ(ثلاثاً)، اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الجَدُّ""",
@@ -658,7 +726,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #3',
+    subtitle: "Remembrance after the Taslîm #3",
+    audio: "68hm.mp3",
     id: 68,
     gid: 25,
     ar_dua: """لاَ إِلَهَ إلَّا اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ، لاَ إِلَهَ إِلَّا اللَّهُ، وَلَا نَعْبُدُ إِلَّا إِيَّاهُ، لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ، لَا إِلَهَ إِلَّا اللَّهُ مُخْلِصِينَ لَهُ الدِّيْنَ وَلَوْ كَرِهَ الْكَافِرُونَ""",
@@ -667,7 +736,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #4',
+    subtitle: "Remembrance after the Taslîm #4",
+    audio: "69hm.mp3",
     id: 69,
     gid: 25,
     ar_dua: """(١) سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَاللَّهُ أَكْبَرُ (ثلاثا و ثلاثين)<br>
@@ -678,7 +748,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #5',
+    subtitle: "Remembrance after the Taslîm #5",
+    audio: "70hm.mp3",
     id: 70,
     gid: 25,
     ar_dua: """(١) (قُلْ هُوَ اللَّهُ أَحَدٌ...)<br>
@@ -692,7 +763,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #6',
+    subtitle: "Remembrance after the Taslîm #6",
+    audio: "71hm.mp3",
     id: 71,
     gid: 25,
     ar_dua: """(اللَّهُ لا إِلَهَ إِلا هُوَ الْحَيُّ الْقَيُّومُ لا تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ...)""",
@@ -702,7 +774,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #7',
+    subtitle: "Remembrance after the Taslîm #7",
+    audio: "72hm.mp3",
     id: 72,
     gid: 25,
     ar_dua: """لَا إِلَهَ إلَّا اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ (عشر مرات بعد المغرب و الصبح)""",
@@ -711,7 +784,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[24].name +' #8',
+    subtitle: "Remembrance after the Taslîm #8",
+    audio: "73hm.mp3",
     id: 73,
     gid: 25,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً (بعد السلام من صلاة الفجر)""",
@@ -720,7 +794,8 @@ the latter in Tuĥfah Al-Akhbâr (p. 38).""",
   ),
 
   DContent(
-    subtitle: duaData[25].name,
+    subtitle: "Supplication for seeking guidance in forming a decision or choosing the proper course, etc..(Al-'Istikhârah) ",
+    audio: "74hm.mp3",
     id: 74,
     gid: 26,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْتَخِيْرُكَ بِعِلْمِكَ، وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ، وَأَسْأَلُكَ مِنْ فَضْلِكَ الْعَظِيمِ، فَإِنَّكَ تَقْدِرُ وَلَا أَقْدِرُ، وَتَعْلَمُ وَلَا أَعْلَمُ، وَأَنْتَ عَلَّامُ الْغُيُوبِ، اللَّهُمَّ إنْ كُنْتَ تَعْلَمُ أَنْ هَذَاالأَمْرَ - ويُسَمِّي حَاجَتَه - خَيْرٌ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي – أو قالَ: عَاجِلِهِ وَ آجِلِهِ - فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي، ثُمَّ بَارِكْ لِي فِيهِ، وَإِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الأمْرَ شَرٌّ لِي فِي دِينِي وَمَعَاشي وَعَاقِبَةِ أَمْرِي – أوْ قالَ: عَاجِلِهِ وَ آجِلِهِ - فَاصْرِفْهُ عَني، وَاصْرِفْنِي عَنْهُ، وَاقْدُرْ لِيَ الْخَيْرَ حَيْثُ كَانَ، ثُمَّ أَرْضِنِي بِهِ.<sup><small>(١)</small></sup>
@@ -735,7 +810,8 @@ One who seeks guidance from his Creator and consults his fellow believers and th
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #1',
+    subtitle: "Remembrance said in the morning and evening #1",
+    audio: "75hm.mp3",
     id: 75,
     gid: 27,
     ar_dua: """﴿اللهُ لَا إله إلَّا هُوَ الحَيُّ القَيُّومُ لَا...﴾""",
@@ -744,7 +820,8 @@ One who seeks guidance from his Creator and consults his fellow believers and th
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #2',
+    subtitle: "Remembrance said in the morning and evening #2",
+    audio: "",
     id: 76,
     gid: 27,
     ar_dua: """﴿قُل هُوَ اللهُ أحَدٌ...﴾<br>
@@ -760,7 +837,8 @@ One who seeks guidance from his Creator and consults his fellow believers and th
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #3',
+    subtitle: "Remembrance said in the morning and evening #3",
+    audio: "77hm.mp3",
     id: 77,
     gid: 27,
     ar_dua: """أصْبَحْنَا وَ أصْبَحَ المُلْكُ لِلَّهِ، وَ الحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ المُلْكُ، وَ لَهُ الحَمْدُ، وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أسْألُكَ خَيْرَ مَا في هَذَا اليَوْمِ وَ خَيْرَ مَا بَعْدَهُ، وَ أعُوذُ بِكَ مِنْ شَرِّ مَا في هَذَا اليَوْمِ وَ شَرِّ مَا بَعْدَهُ، رَبِّ أعُوذُ بِكَ مِنَ الكَسَلِ، وَ سُوءِ الكِبَرِ، رَبِّ أعُوذُ بِكَ مِنْ عَذَابٍ في النَّارِ وَ عَذَابٍ في القَبْرِ.<sup><small>(١)</small></sup></small></sup>
@@ -776,7 +854,8 @@ and:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #4',
+    subtitle: "Remembrance said in the morning and evening #4",
+    audio: "78hm.mp3",
     id: 78,
     gid: 27,
     ar_dua: """اللهم بِكَ أصْبَحْنَا، وَ بِكَ أمْسَيْنَا، وَ بِكَ نَحْيَا، وَ بِكَ نَمُوتُ، وَ إلَيْكَ النُّشُورُ.<sup><small>(١)</small></sup></small></sup>
@@ -789,7 +868,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #5',
+    subtitle: "Remembrance said in the morning and evening #5",
+    audio: "79hm.mp3",
     id: 79,
     gid: 27,
     ar_dua: """اللهم أنْتَ رَبِّي لَا إلَهَ إلَّا أنْتَ، خَلَقْتَنِي وَ أنَا عَبْدُكَ، وَ أنَا عَلَى عَهْدِكَ وَ وَعْدِكَ مَا اسْتَطَعْتُ، أعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أبُوءُلَكَ بِنِعْمَتِكَ عَلَيَّ، وَ أبُوءُ بِذَنْبِي فَاغْفِرْ لي فَإنَّهُ لَا يَغْفِرُ الذُّنُوبَ إلَّا أنْتَ.""",
@@ -798,7 +878,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #6',
+    subtitle: "Remembrance said in the morning and evening #6",
+    audio: "80hm.mp3",
     id: 80,
     gid: 27,
     ar_dua: """اللهم إنِّي أصْبَحْتُ أُشْهِدُكَ، وَ أُشْهِدُ حَمَلَةَ عَرْشِكَ، وَ مَلَائِكَتِكَ، وَ جَمِيْعَ خَلْقِكَ، أنَّكَ أنْتَ اللهُ لَا إلَهَ إلَّا أنْتَ وَحْدَكَ لَا شَرِيْكَ لَكَ، وَ أنَّ مُحَمَّداً عَبْدُكَ وَ رَسُولُكَ. [أرْبَعَ مَرَّاتٍ]""",
@@ -807,7 +888,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #7',
+    subtitle: "Remembrance said in the morning and evening #7",
+    audio: "81hm.mp3",
     id: 81,
     gid: 27,
     ar_dua: """أللهم مَا أصْبَحَ بِي مِنْ نِعْمَةٍ، أوْ بِأحَدٍ مِنْ خَلْقِكَ، فَمِنْكَ وَحْدَكَ لَا شَرِيْكَ لَكَ، فَلَكَ الحَمْدُ وَ لَكَ الشُّكْرُ.<sup><small>(١)</small></sup>
@@ -817,7 +899,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #8',
+    subtitle: "Remembrance said in the morning and evening #8",
+    audio: "82hm.mp3",
     id: 82,
     gid: 27,
     ar_dua: """اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصْرِي، لَا إِلَهَ إِلَّا أَنْتَ، اللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ، وَالْفَقْرِ، وأَعُوْذُ بِكَ مِنْ عَذَابِ القَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ.[ثَلاثَ مَرَّاتٍ]""",
@@ -826,7 +909,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #9',
+    subtitle: "Remembrance said in the morning and evening #9",
+    audio: "83hm.mp3",
     id: 83,
     gid: 27,
     ar_dua: """حَسْبِيَ اللهُ لَا إلَهَ إلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ العَرْشِ العَظِيمِ [سَبْعَ مَرَّاتٍ]""",
@@ -835,7 +919,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #10',
+    subtitle: "Remembrance said in the morning and evening #10",
+    audio: "84hm.mp3",
     id: 84,
     gid: 27,
     ar_dua: """اللَّهُمَّ إِنِّي أسْأَلُكَ العَفْوَ وَ العَافِيَةَ في الدُّنْيَا وَالآخِرَةِ، اللّهُمَّ إِنِّي أسْأَلُكَ العَفْوَ وَ العَافِيَةَ في دِيْنِي وَدُنْيَايَ وَأهْلي وَمالي، اللَّهُمَّ اسْتُرْ عَوْرَاتي، وَآمِنْ رَوْعَاتي، اللَّهُمَّ احْفَظْني مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِيْنِي وَعَنْ شِمَالي، وَمِنْ فَوْقي ، وَ أعُوذُ بِعَظَمَتِكَ أنْ أُغْتَالَ مِنْ تَحْتِي.""",
@@ -844,7 +929,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #11',
+    subtitle: "Remembrance said in the morning and evening #11",
+    audio: "85hm.mp3",
     id: 85,
     gid: 27,
     ar_dua: """اللَّهُمَّ عَالِمَ الغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَ الأرْضِ، رَبَّ كلِّ شَيءٍ وَمَلِيْكَه، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً، أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ.""",
@@ -853,7 +939,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #12',
+    subtitle: "Remembrance said in the morning and evening #12",
+    audio: "86hm.mp3",
     id: 86,
     gid: 27,
     ar_dua: """بِسمِ اللهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيءٌ في الأرْضِ وَلَا في السَّمَاءِ وَهـوَ السَّمِيعُ العَلِيمُ [ثَلاثَ مَرَّاتٍ]""",
@@ -862,7 +949,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #13',
+    subtitle: "Remembrance said in the morning and evening #13",
+    audio: "87hm.mp3",
     id: 87,
     gid: 27,
     ar_dua: """ رَضِيْتُ بِاللهِ رَبًّا، وَبِالإسْلامِ دِيْناً، وَبِمُحَمَّدٍ نَبِيًّا [ثَلاثَ مَرَّاتٍ]""",
@@ -871,7 +959,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #14',
+    subtitle: "Remembrance said in the morning and evening #14",
+    audio: "88hm.mp3",
     id: 88,
     gid: 27,
     ar_dua: """يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيْثُ، أَصْلِحْ لي شَأْني كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ""",
@@ -880,7 +969,8 @@ At night, recite instead:
   ),
 
   DContent(
-    subtitle: duaData[26].name +' 15',
+    subtitle: "Remembrance said in the morning and evening #15",
+    audio: "89hm.mp3",
     id: 89,
     gid: 27,
     ar_dua: """أَصْبَحْنَا وَ أَصْبَحَ المُلْكُ لِلَّهِ رَبِّ العَالَمِيْنَ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هـَذَا اليَوْمِ: فَتْحَهُ، وَنَصْرَهُ وَ نُورَهُ، وَ بَرَكَتَهُ،وَ هُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيْهِ وَ شَرِّ مَا بَعْدَهُ.
@@ -892,7 +982,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #16',
+    subtitle: "Remembrance said in the morning and evening #16",
+    audio: "90hm.mp3",
     id: 90,
     gid: 27,
     ar_dua: """أَصْبَحْنَا عَلَى فِطْرَةِ الإسْلامِ، وَعَلَى كَلِمَةِ الإخْلاصِ، وَعَلَى دِيْنِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أبِيْنَا إِبْرَاهِيمَ، حَنِيْفاً مُسْلِماً وَمَا كَانَ مِنَ المُشْرِكِيْنَ.
@@ -902,7 +993,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #17',
+    subtitle: "Remembrance said in the morning and evening #17",
+    audio: "91hm.mp3",
     id: 91,
     gid: 27,
     ar_dua: """سُبْحَانَ اللهِ وَبِحَمْدِهِ [مِئَةَ مَرَّةٍ]""",
@@ -911,7 +1003,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #18',
+    subtitle: "Remembrance said in the morning and evening #18",
+    audio: "92hm.mp3",
     id: 92,
     gid: 27,
     ar_dua: """لَا إلَهَ إلَّا اللهُ وحْدَهُ لَا شَرِيكَ لهُ، لهُ المُلْكُ ولهُ الحَمْدُ، وهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ. [عشر مرات]<sup><small>(١)</small></sup>أو [مرة واحدة]<sup><small>(٢)</small></sup>.""",
@@ -921,7 +1014,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #19',
+    subtitle: "Remembrance said in the morning and evening #19",
+    audio: "93hm.mp3",
     id: 93,
     gid: 27,
     ar_dua: """لَا إلَهَ إلَّا اللهُ وحْدَهُ لَا شَريْكَ لهُ، لهُ المُلْكُ ولَهُ الحَمْدُ، وهُوَ عَلَى كُلِّ شَيءٍ قَدِيْرٌ [مئةَ مَرَّةٍ إذا أصْبَحَ]""",
@@ -930,7 +1024,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #20',
+    subtitle: "Remembrance said in the morning and evening #20",
+    audio: "94hm.mp3",
     id: 94,
     gid: 27,
     ar_dua: """سُبْحَانَ اللهِ وَبِحَمْدِهِ، عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ ، وَمِدَادَ كَلِمَاتِهِ. [ثَلاثَ مَرَّاتٍ إذا أصْبَحَ]""",
@@ -939,7 +1034,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #21',
+    subtitle: "Remembrance said in the morning and evening #21",
+    audio: "95hm.mp3",
     id: 95,
     gid: 27,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَ رِزْقاً طَيِّباً، وَ عَمَلاً مُتَقَبَّلاً [إذا أصْبَحَ]""",
@@ -948,7 +1044,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #22',
+    subtitle: "Remembrance said in the morning and evening #22",
+    audio: "96hm.mp3",
     id: 96,
     gid: 27,
     ar_dua: """أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ [مِئَةَ مَرَّةٍ اليَوْمِ]""",
@@ -957,7 +1054,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #23',
+    subtitle: "Remembrance said in the morning and evening #23",
+    audio: "97hm.mp3",
     id: 97,
     gid: 27,
     ar_dua: """أَعُوذُبِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ [ثَلاثَ مَرَّاتٍ إذا أمْسَى]""",
@@ -966,7 +1064,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[26].name +' #24',
+    subtitle: "Remembrance said in the morning and evening #24",
+    audio: "98hm.mp3",
     id: 98,
     gid: 27,
     ar_dua: """اللَّهُمَّ صَلِّ وَ سَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ [عَشْرَ مَرَّاتٍ]""",
@@ -975,7 +1074,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #1',
+    subtitle: "Remembrance before sleeping #1",
+    audio: "",
     id: 99,
     gid: 28,
     ar_dua: """﴿قُل هُوَ اللهُ أحَدٌ...﴾<br>
@@ -987,7 +1087,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #2',
+    subtitle: "Remembrance before sleeping #2",
+    audio: "100hm.mp3",
     id: 100,
     gid: 28,
     ar_dua: """﴿اللهُ لَا إلَهَ إلَّا هُوَ الحَيُّ القَيُّومُ... ﴾""",
@@ -996,7 +1097,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #3',
+    subtitle: "Remembrance before sleeping #3",
+    audio: "101hm.mp3",
     id: 101,
     gid: 28,
     ar_dua: """﴿ءامَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ...﴾""",
@@ -1005,7 +1107,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #4',
+    subtitle: "Remembrance before sleeping #4",
+    audio: "102hm.mp3",
     id: 102,
     gid: 28,
     ar_dua: """بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي، وَبِكَ أَرْفَعُهُ، فإِنْ أَمْسَكْتَ نَفْسِي فَارْحَمْهَا، وَإِنْ أَرْسَلْتَهَا فَاحْفَظْهَا، بِمَا تَحْفَظُ بِهِ عِبَادَكَ الصَّالِحِينَ""",
@@ -1014,7 +1117,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #5',
+    subtitle: "Remembrance before sleeping #5",
+    audio: "103hm.mp3",
     id: 103,
     gid: 28,
     ar_dua: """اللَّهُمَّ إِنَّكَ خَلَقْتَ نَفْسي وَأَنْتَ تَوَفَّاهـَا، لَكَ مَمَاتُهَا وَمَحْيَاهَا، إِنْ أَحْيَيْتَهَا فَاحْفَظْهَا، وَإِنْ أَمَتَّهَا فَاغْفِرْ لَهَا، اللَّهُمَّ إِنَّي أَسْألُكَ العَافِيَةَ""",
@@ -1023,7 +1127,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' 6',
+    subtitle: "Remembrance before sleeping #6",
+    audio: "104hm.mp3",
     id: 104,
     gid: 28,
     ar_dua: """اللَّهُمَّ قِنِي عَذابَكَ، يَوْمَ تَبْعَثُ عِبَادَكَ""",
@@ -1032,7 +1137,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #7',
+    subtitle: "Remembrance before sleeping #7",
+    audio: "105hm.mp3",
     id: 105,
     gid: 28,
     ar_dua: """بِاسْمِكَ اللَّهُمَّ أَموتُ وَأحْيَا""",
@@ -1041,7 +1147,8 @@ At night, recite instead: 'We have reached the evening and at this very time all
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #8',
+    subtitle: "Remembrance before sleeping #8",
+    audio: "106hm.mp3",
     id: 106,
     gid: 28,
     ar_dua: """سُبْحَانَ اللهِ (ثَلاثاً وثَلاثِينَ)
@@ -1054,7 +1161,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #9',
+    subtitle: "Remembrance before sleeping #9",
+    audio: "107hm.mp3",
     id: 107,
     gid: 28,
     ar_dua: """اللَّهُمَّ رَبَّ السَّمَوَاتِ السَّبْعِ، وَرَبَّ الأرْضِ، وربَّ العَرْشِ العَظِيمِ، رَبَّنَا وَرَبَّ كُلِّ شَيءٍ، فَالِقَ الحَبِّ وَالنَّوَى، وَمُنْزِلَ التَّوْرَاةِ وَالإنْجِيْلِ و الفُرْقَانِ، أَعوذُ بِكَ مِن شَرِّ كُلِّ شَيءٍ أَنْتَ آخِذٌ بِنَاصِيتِهِ، اللَّهُمَّ أَنْتَ الأوَّلُ فَلَيْسَ قَبْلَكَ شَيءٌ، وَأَنْتَ الآخِرُ فَلَيْسَ بَعْدَكَ شَيْءٌ، وَأَنْتَ الظَّاهِرُ فَلَيْسَ فَوْقَكَ شَيءٌ، وَأَنْتَ الْبَاطِنُ فَلَيْسَ دُونَكَ شَيءٌ، اقْضِ عَنَّا الدَّيْنَ، وَأَغْنِنَا مِنَ الفَقْرِ""",
@@ -1063,7 +1171,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #10',
+    subtitle: "Remembrance before sleeping #10",
+    audio: "108hm.mp3",
     id: 108,
     gid: 28,
     ar_dua: """الحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا، وَكَفَانَا، وَآوَانَا، فَكَمْ مِمَّنْ لَا كَافِيَ لَهُ وَلَا مُؤْوِيَ""",
@@ -1072,7 +1181,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #11',
+    subtitle: "Remembrance before sleeping #11",
+    audio: "",
     id: 109,
     gid: 28,
     ar_dua: """اللَّهُمَّ عالِمَ الغَيْبِ وَالشّهَادَةِ فَاطِرَ السَّمَوَاتِ وَالأرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلَيْكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِن شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءاً، أَوْ أَجُـرَّهُ إِلَى مُسْلِمٍ""",
@@ -1081,7 +1191,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #12',
+    subtitle: "Remembrance before sleeping #12",
+    audio: "",
     id: 110,
     gid: 28,
     ar_dua: """يَقْرَاُ ﴿الٓمٓ . تَنْزِيْلُ الْكِتَابِ...﴾ وَ ﴿تَبَارَكَ الَّذِي بِيَدِهِ المُلْكَ...﴾""",
@@ -1090,7 +1201,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[27].name +' #13',
+    subtitle: "Remembrance before sleeping #13",
+    audio: "111hm.mp3",
     id: 111,
     gid: 28,
     ar_dua: """اللَّهُمَّ أَسْلَمْتُ نَفْسِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ، وَأَلْجَأتُ ظَهْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لَا مَلْجَأَ وَلا مَنْجَا مِنْكَ إِلَّا إِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ""",
@@ -1099,7 +1211,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[28].name ,
+    subtitle: "Supplication when turning over during the night ",
+    audio: "112hm.mp3",
     id: 112,
     gid: 29,
     ar_dua: """لَا إِلَهَ إِلَّا اللهُ الوَاحِدُ القَهَّارُ، رَبُّ السَّمَوَاتِ وَالأرْضِ وَمَا بَيْنَهُمَا العَزِيْزُ الغَـفَّارُ""",
@@ -1108,7 +1221,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[29].name,
+    subtitle: "Upon experiencing unrest, fear, apprehensiveness and the like during sleep ",
+    audio: "113hm.mp3",
     id: 113,
     gid: 30,
     ar_dua: """أَعُوذُبِكَلِمَاتِ اللهِ التَّامَّاتِ، مِنْ غَضَبِهِ وَعِقَابِهِ، وَشَرِّ عِبَادِهِ، وَمِنْ هَمَزَاتِ الشَّيَاطِينِ، وَأنْ يَحْضُرُونِ""",
@@ -1117,7 +1231,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[30].name +' #1',
+    subtitle: "Upon seeing a bad dream #1",
+    audio: "",
     id: 114,
     gid: 31,
     ar_dua: """يَنْفُثُ عَن يَسَارِهِ (ثَلاثاً).
@@ -1133,7 +1248,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[30].name +' #2',
+    subtitle: "Upon seeing a bad dream #2",
+    audio: "",
     id: 115,
     gid: 31,
     ar_dua: """يَقُومُ يُصَلِّي إنْ أرَادَ ذَلِكَ""",
@@ -1142,7 +1258,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[31].name +' #1',
+    subtitle: "Du'â Qunût Al-Witr  #1",
+    audio: "116hm.mp3",
     id: 116,
     gid: 32,
     ar_dua: """اللَّهُمَّ اهْدِنِي فِيْمَنْ هَدَيْتَ، وَعَافِنِي فِيْمَنْ عَافَيْتَ، وَتَوَلَّنِي فِيْمَنْ تَوَلَّيْتَ، وَبَارِكْ لِي فِيْمَا أَعْطَيْتَ، وَقِنِي شَرَّ مَا قَضَيْتَ، فَإِنَّكَ تَقْضِي وَلَا يُقْضَى عَلَيْكَ، إِنَّهُ لَا يَذِلُّ مَنْ والَيْتَ، [وَ لَا يَعِزُّ مَنْ عَادَيْتَ]، تَبارَكْتَ رَبَّنَا وَتَعَالَيْتَ""",
@@ -1151,7 +1268,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[31].name +' #2',
+    subtitle: "Du'â Qunût Al-Witr  #2",
+    audio: "117hm.mp3",
     id: 117,
     gid: 32,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ، وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ، وَأَعُوذُ بِكَ مِنْكَ، لَا أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ""",
@@ -1160,7 +1278,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[31].name +' #3',
+    subtitle: "Du'â Qunût Al-Witr  #3",
+    audio: "118hm.mp3",
     id: 118,
     gid: 32,
     ar_dua: """اللَّهُمَّ إِيَّاكَ نَعْبُدُ، وَلَكَ نُصَلِّي وَنَسْجُدُ، وَإِلَيْكَ نَسْعَى وَنَحْفِدُ، نَرْجُو رَحْمَتَكَ، وَنَخْشَى عَذَابَكَ، إِنَّ عَذَابَكَ بِالكَافِرِيْنَ ملْحَقٌ، اللَّهُمَّ إِنَّا نَسْتَعِيْنُكَ، وَنَسْتَغْفِرُكَ، وَنُثْنِي عَلَيْكَ الخَيْرَ، وَلَا نَكْفُرُكَ، وَنُؤْمِنُ بِكَ، وَنَخْضَعُ لَكَ، وَنَخْلَعُ مَنْ يَكْفُرُكَ""",
@@ -1169,7 +1288,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[32].name,
+    subtitle: "Remembrance immediately after the Taslîm of the Witr Ŝalâh ",
+    audio: "119hm.mp3",
     id: 119,
     gid: 33,
     ar_dua: """سُبْحَانَ المَلِكِ القُدُّوسِ (ثَلاثَ مَرَّاتٍ، وَ الثَّالِثَةُ يَجْهَرُ بِهَا وَيَمُدُّ صَوْتَهُ يَقُولُ:[ ربِّ المَلائِكَةِ وَالرُّوحِ])""",
@@ -1178,7 +1298,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[33].name +' #1',
+    subtitle: "Supplication for anxiety and sorrow #1",
+    audio: "120hm.mp3",
     id: 120,
     gid: 34,
     ar_dua: """اللَّهُمَّ إِنِّي عَبْدُكَ، ابْنُ عَبْدِكَ، ابْنُ أَمَتِكَ، نَاصِيَتِي بِيَدِكَ، مَاضٍ فِيَّ حُكْمُكَ، عَدْلٌ فِيَّ قَضَاؤُكَ، أَسْأَلُكَ بِكُلِّ اسْمٍ هُوَ لَكَ، سَمَّيْتَ بِهِ نَفْسَكَ، أوْ أَنْزَلْتَهُ فِي كِتَابِكَ، أَوْ عَلَّمْتَهُ أَحَداً مِنْ خَلْقِكَ، أَوِ اسْتَأْثَرْتَ بِهِ فِي عِلْمِ الغَيْبِ عِنْدَكَ، أَنْ تَجْعَلَ القُرْآنَ رَبِيْعَ قَلْبِي، وَنُورَ صَدْرِي، وجَلَاءَ حُزْنِي، وَذَهَابَ هَمِّي""",
@@ -1187,7 +1308,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[33].name +' #2',
+    subtitle: "Supplication for anxiety and sorrow #2",
+    audio: "121hm.mp3",
     id: 121,
     gid: 34,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الهَمِّ وَ الْحَـزَنِ، والعَجْـزِ والكَسَلِ، والبُخْلِ والجُبْنِ، وضَلَعِ الدَّيْنِ وغَلَبَةِ الرِّجَالِ""",
@@ -1196,7 +1318,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[34].name +' #1',
+    subtitle: "Supplication for one in distress #1",
+    audio: "122hm.mp3",
     id: 122,
     gid: 35,
     ar_dua: """لَا إلَهَ إِلَّا اللَّهُ الْعَظِيْمُ الْحَلِيْمُ، لَا إِلَهَ إِلَّا اللَّهُ رَبُّ العَرْشِ العَظِيْمُ، لَا إِلَهَ إِلَّا اللَّهُ رَبُّ السَّمَوَاتِ، وَرَبُّ الأَرْضِ وَرَبُّ العَرْشِ الكَرِيْمِ""",
@@ -1205,7 +1328,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[34].name +' #2',
+    subtitle: "Supplication for one in distress #2",
+    audio: "123hm.mp3",
     id: 123,
     gid: 35,
     ar_dua: """اللَّهُمَّ رَحْمَتَكَ أَرْجـُو، فَلا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ، وَأَصْلِحْ لِي شَأْنِي كُلَّهُ، لَا إِلَهَ إِلَّا أنْتَ""",
@@ -1214,7 +1338,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[34].name +' #3',
+    subtitle: "Supplication for one in distress #3",
+    audio: "124hm.mp3",
     id: 124,
     gid: 35,
     ar_dua: """لَا إِلَهَ إِلَّا أنْتَ سُبْحَانَكَ، إِنِّي كُنْتُ مِنَ الظَّالِمِيْنَ""",
@@ -1223,7 +1348,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[34].name +' #4',
+    subtitle: "Supplication for one in distress #4",
+    audio: "125hm.mp3",
     id: 125,
     gid: 35,
     ar_dua: """اللهُ اللهُ رَبِّي لَا أُشْرِكُ بِهِ شَيْئاً""",
@@ -1232,7 +1358,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[35].name +' #1',
+    subtitle: "Upon encountering an enemy or those of authority #1",
+    audio: "126hm.mp3",
     id: 126,
     gid: 36,
     ar_dua: """اللَّهُمَّ إِنَّا نَجْعَلُكَ فِي نُحُورِهِمْ، وَنَعُوذُ بِكَ مِنْ شُرُورِهـِمْ""",
@@ -1241,7 +1368,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[35].name +' #2',
+    subtitle: "Upon encountering an enemy or those of authority #2",
+    audio: "127hm.mp3",
     id: 127,
     gid: 36,
     ar_dua: """اللَّهُمَّ أَنْتَ عَضُدِي، وَأَنْتَ نَصِيْرِي، بِكَ أَحُولُ، وَبِكَ أَصُولُ، وَبِكَ أُقَاتِلُ""",
@@ -1250,7 +1378,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[35].name +' #3',
+    subtitle: "Upon encountering an enemy or those of authority #3",
+    audio: "128hm.mp3",
     id: 128,
     gid: 36,
     ar_dua: """حَسْبُنَا اللهُ، وَنِعْمَ الوَكِيْلُ""",
@@ -1259,7 +1388,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[36].name +' #1',
+    subtitle: "For fear of the opression of rulers #1",
+    audio: "129hm.mp3",
     id: 129,
     gid: 37,
     ar_dua: """اللَّهُمَّ رَبَّ السَّمَوَاتِ السَّبْعِ، وَ رَبَّ العَرْشِ العَظِيْمِ، كُنْ لِي جَاراً مِنْ فُلَانِ بْنِ فُلَانٍ، وَ أَحْزَابِهِ مِنْ خَلائِقِكَ؛ أَنْ يَفْرُطَ عَلَيَّ أَحَدٌ مِنهُمْ أوْ يَطْغَى، عَزَّ جَارُكَ، وَ جَلَّ ثَنَائُكَ، وَ لَا إِلَهَ إِلَّا أَنْتَ""",
@@ -1268,7 +1398,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[36].name +' #3',
+    subtitle: "For fear of the opression of rulers #2",
+    audio: "130hm.mp3",
     id: 130,
     gid: 37,
     ar_dua: """اللهُ أَكْبَرُ، اللهُ أَعَزُّ مِنْ خَلْقِهِ جَمِيْعًا، اللهُ أَعَزُّ مِمَّا أَخَافُ وَ أَحْذَرُ، أَعُوذُ باللهِ الَّذِي لَا إِلَهَ إِلَّا هُوَ، الْمُمْسِكِ السَّمَوَاتِ السَّبْعِ أَنْ يَقَعْنَ عَلَى الأَرْضِ إِلَّا بِإِذْنِهِ، مِنْ شَرِّ عَبْدِكَ فُلاَنٍ، وُجُنُودِهِ وَ أَتْبَاعِهِ وَ أَشْيَاعِهِ، مِنَ الْجِنِّ وَ الإِنْسِ، اللَّهُمَّ كُنْ لِي جَارًا مِنْ شَرِّهِمْ، جَلَّ ثَنَاؤُك، وَ عَزَّ جَارُكَ، وَ تَبَارَكَ اسْمُكَ: وَ لَا إِلَهَ غَيْرُكَ. [ثَلاثَ مَرَّاتٍ]""",
@@ -1277,7 +1408,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[37].name,
+    subtitle: "Against enemies ",
+    audio: "131hm.mp3",
     id: 131,
     gid: 38,
     ar_dua: """اللَّهُمَّ مُنْزِلَ الْكِتَابِ، سَرِيْعَ الْحِسَابِ، اهْزِمِ الأحْزَابَ، اللَّهُمَّ اهْزِمْهُمْ وَ زَلْزِلْهُمْ""",
@@ -1286,7 +1418,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[38].name,
+    subtitle: "When afraid of a group people ",
+    audio: "132hm.mp3",
     id: 132,
     gid: 39,
     ar_dua: """اللَّهُمَّ اكْفِنِيْهِمْ بِمَا شِئْتَ""",
@@ -1295,7 +1428,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[39].name +' #1',
+    subtitle: "Supplication for one afflicted with doubt in his faith #1",
+    audio: "",
     id: 133,
     gid: 40,
     ar_dua: """(1) يَسْتَعِيْذُ بِاللهِ
@@ -1306,7 +1440,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[39].name +' #2',
+    subtitle: "Supplication for one afflicted with doubt in his faith #2",
+    audio: "134hm.mp3",
     id: 134,
     gid: 40,
     ar_dua: """آمَنْتُ بِاللهِ وَرُسُلِهِ""",
@@ -1315,7 +1450,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[39].name +' #3',
+    subtitle: "Supplication for one afflicted with doubt in his faith #3",
+    audio: "135hm.mp3",
     id: 135,
     gid: 40,
     ar_dua: """﴿هُوَ الأوَّلُ وَالآخِـرُ وَالظَّاهِرُ وَالْبَاطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ﴾""",
@@ -1325,7 +1461,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[40].name +' #1',
+    subtitle: "Settling a debt #1",
+    audio: "136hm.mp3",
     id: 136,
     gid: 41,
     ar_dua: """اللَّهُمَّ اكْفِنِي بِحَلاَلِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ""",
@@ -1334,7 +1471,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[40].name +' #2',
+    subtitle: "Settling a debt #2",
+    audio: "137hm.mp3",
     id: 137,
     gid: 41,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الهَمِّ وَ الْحَـزَنِ، والعَجْزِ والكَسَلِ، والبُخْلِ والجُبْنِ، وضَلَعِ الدَّيْنِ وغَلَبَةِ الرِّجَال""",
@@ -1343,7 +1481,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[41].name,
+    subtitle: "Supplication for one afflicted by whisperings in prayer or recitation ",
+    audio: "138hm.mp3",
     id: 138,
     gid: 42,
     ar_dua: """أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ، واتْفُلْ عَلَى يَساَرِكَ [ثَلاثاً]""",
@@ -1352,7 +1491,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[42].name,
+    subtitle: "Supplication for one whose affairs have become difficult ",
+    audio: "139hm.mp3",
     id: 139,
     gid: 43,
     ar_dua: """اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلاً، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذا شِئْتَ سَهْلاً""",
@@ -1361,7 +1501,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[43].name,
+    subtitle: "Upon committing a sin ",
+    audio: "",
     id: 140,
     gid: 44,
     ar_dua: """مَا مِنْ عَبْدٍ يُذْنِبُ ذَنْباً فَيُحْسِنُ الطُّهُورَ، ثُمَّ يَقُومُ فَيُصَلِّي رَكْعَتَيْنِ، ثُمَّ يَسْتَغْفِرُاللهَ إلَّا غَفَرَ اللهُ لَهُ""",
@@ -1370,7 +1511,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[44].name +' #1',
+    subtitle: "Supplications for expelling the devil and his whisperings #1",
+    audio: "",
     id: 141,
     gid: 45,
     ar_dua: """الاسْتِعَاذَةُ بِاللهِ مِنْهُ""",
@@ -1379,7 +1521,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[44].name +' #2',
+    subtitle: "Supplications for expelling the devil and his whisperings #2",
+    audio: "",
     id: 142,
     gid: 45,
     ar_dua: """الأذَانُ""",
@@ -1388,7 +1531,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[44].name +' #3',
+    subtitle: "Supplications for expelling the devil and his whisperings #3",
+    audio: "",
     id: 143,
     gid: 45,
     ar_dua: """الأذْكَارُ وَ قِراءَةُ القُرْآنِ""",
@@ -1397,7 +1541,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[45].name,
+    subtitle: "Supplication when stricken with a mishap or overtaken by an affair ",
+    audio: "144hm.mp3",
     id: 144,
     gid: 46,
     ar_dua: """قَدَرُ اللهِ وَما شَاءَ فَعَلَ""",
@@ -1406,7 +1551,8 @@ Allah is the Greatest [Thirty-four times].""",
   ),
 
   DContent(
-    subtitle: duaData[46].name,
+    subtitle: "Congratulations on the occasion of a birth ",
+    audio: "145hm.mp3",
     id: 145,
     gid: 47,
     ar_dua: """بَارَكَ اللهُ لَكَ فِي الْمَوْهُوبِ لَكَ، وَ شَكَرْتَ الْوَاهِبَ، وَ بَلَغَ أَشُدَّهُ، وَ رُزِقْتَ بِرَّهُ
@@ -1418,7 +1564,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[47].name,
+    subtitle: "Placing children under Allah's protection ",
+    audio: "146hm.mp3",
     id: 146,
     gid: 48,
     ar_dua: """أُعِيْذُكُمَا بِكَلِمَاتِ اللهِ التَّامَّةِ، مِنْ كُلِّ شَيْطَانٍ وَهـَامَّةٍ، وَمِنْ كُلِّ عَيْنٍ لامَّةٍ""",
@@ -1427,7 +1574,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[48].name +' #1',
+    subtitle: "When visiting the sick #1",
+    audio: "147hm.mp3",
     id: 147,
     gid: 49,
     ar_dua: """لَا بأْسَ طَهُورٌ إِنْ شَاءَ اللهُ""",
@@ -1436,7 +1584,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[48].name +' #2',
+    subtitle: "When visiting the sick #2",
+    audio: "148hm.mp3",
     id: 148,
     gid: 49,
     ar_dua: """أَسْأَلُ اللهَ العَظِيْمَ، رَبَّ العَرْشِ العَظِيْمِ، أَنْ يَشْفِيَكَ [سَبْعَ مَرَّاتٍ]""",
@@ -1445,7 +1594,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[49].name,
+    subtitle: "Excellence of visiting the sick ",
+    audio: "",
     id: 149,
     gid: 50,
     ar_dua: """إذَا عَادَ الرَّجُلُ أخَاهُ المُسْلِمَ، مَشَى فِي خِرَافَةِ الجَنَّةِ حَتَّى يَجْلِسَ، فَإذَا جَلَسَ غَمَرَتْهُ الرَّحْمَةُ،  فَإنْ كَانَ غُدْوَةً صَلَّى عَلَيْهِ سَبْعُونَ ألْفَ مَلَكٍ حَتَّى يُمْسِيَ، و إنْ كَانَ مَسَاءً صَلَّى عَلَيْهِ سَبْعُونَ ألْفَ مَلَكٍ حَتَّى يُصْبِحَ""",
@@ -1454,7 +1604,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[50].name +' #1',
+    subtitle: "Supplication of the sick who have renounced all hope of life #1",
+    audio: "150hm.mp3",
     id: 150,
     gid: 51,
     ar_dua: """اللَّهُمَّ اغْفِرْ لي، وَارْحَمْنِي، وَأَلْحِقْنِي بِالرَّفِيْقِ الأعْلَى""",
@@ -1463,7 +1614,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[50].name +' #2',
+    subtitle: "Supplication of the sick who have renounced all hope of life #2",
+    audio: "151hm.mp3",
     id: 151,
     gid: 51,
     ar_dua: """لَا إِلَهَ إِلَّا اللهُ، إِنَّ لِلْمَوْتِ لَسَكَرَاتٍ""",
@@ -1472,7 +1624,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[50].name +' #3',
+    subtitle: "Supplication of the sick who have renounced all hope of life #3",
+    audio: "152hm.mp3",
     id: 152,
     gid: 51,
     ar_dua: """لَا إلَهَ إلَّا اللهُ وَاللهُ أَكْبَرُ، لَا إلَهَ إلَّا اللهُ وحْدَهُ، لَا إلَهَ إلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لهُ، لَا إلَهَ إلَّا اللهُ لَهُ المُلْكُ ولَهُ الحَمْدُ، لَا إلَهَ إلَّا اللهُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ""",
@@ -1481,7 +1634,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[51].name,
+    subtitle: "Instruction for the one nearing death ",
+    audio: "153hm.mp3",
     id: 153,
     gid: 52,
     ar_dua: """لَا إلَهَ إلَّا اللهُ""",
@@ -1490,7 +1644,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[52].name,
+    subtitle: "Supplication for one afflicted by a calamity ",
+    audio: "154hm.mp3",
     id: 154,
     gid: 53,
     ar_dua: """إِنَّا لِلهِ وَ إِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أجُرْنِي فِي مُصِيْبَتِي، وَ أخْلِفْ لِي خَيْراً مِنْهَا""",
@@ -1499,7 +1654,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[53].name,
+    subtitle: "When closing the eyes of the deceased ",
+    audio: "155hm.mp3",
     id: 155,
     gid: 54,
     ar_dua: """اللَّهُمَّ اغْفِرْ لِفُلانٍ (باسْمِهِ)، وَارْفَعْ دَرَجَتَهُ في المَهْدِيِّيْنَ، وَاخْلُفْهُ في عَقِبِهِ في الغَابِرِيْنَ، وَاغْفِرْ لَنَا وَلَهُ يَا رَبَّ العَالَمِيْنَ، وَافْسَحْ لَهُ في قَبْرِهِ وَنَوِّرْ لَهُ فِيْهِ""",
@@ -1508,7 +1664,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[54].name,
+    subtitle: "Supplication for the deceased at the funeral prayer #1",
+    audio: "156hm.mp3",
     id: 156,
     gid: 55,
     ar_dua: """اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ، وَعافِهِ، وَاعْفُ عَنْهُ، وَأَكْرِمْ نُزُلَهُ، وَوَسِّعْ مُدْخَلَهُ، وَاغْسِلْهُ بِالْمَاءِ وَالثَّـلْجِ وَالْبَرَدِ، وَنَقِّهِ مِنَ الْخَطَايَا كَمَا نَقَّيْتَ الثَّوْبَ الأَبْيَضَ مِنَ الدَّنَسِ، وَأَبْدِلْهُ داراً خَيْراً مِنْ دَارِهِ، وَأَهْلاً خَيْراً مِنْ أَهْلِهِ، وَزَوْجَاً خَيْراً مِنْ زَوْجِهِ، وَأَدْخِلْهُ الْجَنَّةَ، وَأَعِذْهُ مِنْ عَذَابِ القَبْرِ(وَ عَذَابِ النَّارِ)""",
@@ -1517,7 +1674,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[54].name +' #1',
+    subtitle: "Supplication for the deceased at the funeral prayer #2",
+    audio: "157hm.mp3",
     id: 157,
     gid: 55,
     ar_dua: """اللَّهُمَّ اغْفِرْ لِحَيِّنَا، وَمَيِّتِنَا، وَشَاهِدِنَا، وَغَائِبِنَا، وَصَغِيْرِنَا، وَكَبِيْرِنَا، وَذَكَرِنَا، وَأُنْثَانَا، اللَّهُمَّ مَنْ أَحْيَيْتَهُ مِنَّا فَأَحْيِهِ عَلَى الإِسْلامِ، وَمَنْ تَوَفَّيْتَهُ مِنَّا فَتَوَفَّهُ عَلَى الإِيْمَانِ، اللَّهُمَّ لَا تَحْرِمْنَا أَجْرَهُ، وَلَا تُضِلَّنَا بَعْدَهُ""",
@@ -1526,7 +1684,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[54].name +' #2',
+    subtitle: "Supplication for the deceased at the funeral prayer #3",
+    audio: "158hm.mp3",
     id: 158,
     gid: 55,
     ar_dua: """اللَّهُمَّ إِنَّ فُلانَ بْنَ فُلانٍ في ذِمَّتِكَ، وَحَبْلِ جِوارِكَ، فَقِهِ مِنْ فِتْنَةِ الْقَبْرِ وَعَذَابِ النَّارِ، وَأَنْتَ أَهْلُ الْوَفاءِ وَالْحَقِّ، فَاغْفِرْ لَهُ، وَارْحَمْهُ، إِنَّكَ أَنْتَ الغَفُورُ الرَّحِيْمُ""",
@@ -1535,7 +1694,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[54].name +' #3',
+    subtitle: "Supplication for the deceased at the funeral prayer #4",
+    audio: "159hm.mp3",
     id: 159,
     gid: 55,
     ar_dua: """اللَّهُمَّ عَبْدُكَ وَابْنُ أَمَتِكَ، احْتَاجَ إِلى رَحْمَتِكَ، وَأَنْتَ غَنِيٌّ عَنْ عَذَابِهِ، إِنْ كَانَ مُحْسِناً فَزِدْ في حَسَنَاتِهِ، وَإِنْ كَانَ مُسِيْئاً فَتَجَاوَزْ عَنْهُ""",
@@ -1544,7 +1704,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[55].name +' #1',
+    subtitle: "Supplication for the deceased child at the funeral prayer #1",
+    audio: "160hm.mp3",
     id: 160,
     gid: 56,
     ar_dua: """اللَّهُمَّ اجْعَلْهُ فَرَطاً وَذُخْراً لِوالِدَيْهِ، وَشَفِيْعاً مُجَاباً، اللَّهُمَّ ثَقِّلْ بِهِ مَوَازِيْنَهُمَا، وَأَعْظِمْ بِهِ أُجـُورَهُمَا، وَأَلْحِقْهُ بِصَالِحِ المُؤْمِنِيْنَ، وَاجْعَلْهُ في كَفَالَةِ إِبْرَاهـِيْمَ، وَقِهِ بِرَحْمَتِكَ عَذَابَ الْجَحِيْمِ، و أبْدِلْهُ دَاراً خَيْراً مِنْ دَارِهِ، و أهْلاً خَيْراً مِنْ أهْلِهِ، اللهم اغْفِرْ لأسْلاَفِنَا، وَ أفْرَاطِنَا، وَ مَنْ سَبَقَنَا باِلإيْمَانِ""",
@@ -1553,7 +1714,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[55].name +' #2',
+    subtitle: "Supplication for the deceased child at the funeral prayer #2",
+    audio: "161hm.mp3",
     id: 161,
     gid: 56,
     ar_dua: """اللَّهُمَّ اجْعَلْهُ لَنَا فَرَطاً، وَسَلَفاً، وَأَجْراً""",
@@ -1562,7 +1724,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[56].name,
+    subtitle: "Condolence ",
+    audio: "162hm.mp3",
     id: 162,
     gid: 57,
     ar_dua: """إِنَّ لِلَّهِ مَا أَخَذَ، وَلَهُ مَا أَعْطَى، وَكُلُّ شَيءٍ عِنْدَهُ بِأَجَلٍ مُسَمَّىً...فَلْتَصْبِرْ وَ لْتَحْتَسِبْ""",
@@ -1571,7 +1734,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[57].name,
+    subtitle: "Placing the deceased in the grave ",
+    audio: "163hm.mp3",
     id: 163,
     gid: 58,
     ar_dua: """بِسْمِ اللهِ، وَعَلَى سُنَّةِ رَسُولِ اللهِ""",
@@ -1580,7 +1744,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[58].name,
+    subtitle: "After burying the deceased ",
+    audio: "164hm.mp3",
     id: 164,
     gid: 59,
     ar_dua: """اللَّهُمَّ اغْفِرْ لَهُ، اللَّهُمَّ ثَبِّتْهُ""",
@@ -1589,7 +1754,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[59].name,
+    subtitle: "Visiting the graves ",
+    audio: "165hm.mp3",
     id: 165,
     gid: 60,
     ar_dua: """السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ، مِنَ المُؤْمِنِيْنَ، وَالْمُسْلِمِيْنَ، وَإِنَّا إِنْ شَاءَ اللهُ بِكُمْ لَاحِقُونَ، [وَ يَرْ حَمُ اللهُ المُسْتَقْدِمِيْنَ مِنَّا وَ المُسْتَأخِرِيْنَ] أسْألُ اللهَ لَنَا وَلَكُمْ العَافِيَةَ""",
@@ -1598,7 +1764,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[60].name +' #1',
+    subtitle: "Prayer said during a wind storm #1",
+    audio: "166hm.mp3",
     id: 166,
     gid: 61,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّهَا""",
@@ -1607,7 +1774,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[60].name +' #2',
+    subtitle: "Prayer said during a wind storm #2",
+    audio: "167hm.mp3",
     id: 167,
     gid: 61,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَخَيْرَ مَا فِيْهَا، وَخَيْرَ مَا اُرْسِلَتْ بِهِ، وَأَعُوذُ بِكَ مِنْ شَـرِّهَا، وَشَرِّ مَا فِيْهَا، وَشَرِّ مَا اُرْسِلَتْ بِهِ""",
@@ -1616,7 +1784,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[61].name,
+    subtitle: "Supplication upon hearing thunder ",
+    audio: "168hm.mp3",
     id: 168,
     gid: 62,
     ar_dua: """سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ، وَالمَلائِكَةُ مِنْ خِيْفَتِهِ""",
@@ -1625,7 +1794,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[62].name +' #1',
+    subtitle: "Supplication for rain #1",
+    audio: "169hm.mp3",
     id: 169,
     gid: 63,
     ar_dua: """اللَّهُمَّ أَسْقِنَا غَيْثاً مُغِيْثاً مَرِيْئاً مَرِيْعاً، نَافِعاً، غَيْرَ ضَارٍّ، عاجِلاً غَيْرَ آجِلٍ""",
@@ -1634,7 +1804,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[62].name +' #2',
+    subtitle: "Supplication for rain #2",
+    audio: "170hm.mp3",
     id: 170,
     gid: 63,
     ar_dua: """اللَّهُمَّ أَغِثْنَا، اللَّهُمَّ أَغِثْنَا، اللَّهُمَّ أَغِثْنَا""",
@@ -1643,7 +1814,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[62].name +' #3',
+    subtitle: "Supplication for rain #3",
+    audio: "171hm.mp3",
     id: 171,
     gid: 63,
     ar_dua: """اللَّهُمَّ اسْقِ عِبَادَكَ، وَبَهَائِمَكَ، وَانْشُرْ رَحْمَتَكَ، وَأَحْيِيْ بَلَدَكَ المَيِّتَ""",
@@ -1652,7 +1824,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[63].name,
+    subtitle: "Supplication when it is raining ",
+    audio: "172hm.mp3",
     id: 172,
     gid: 64,
     ar_dua: """اللَّهُمَّ صَيِّباً نَافِعاً""",
@@ -1661,7 +1834,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[64].name,
+    subtitle: "Supplication after rain ",
+    audio: "173hm.mp3",
     id: 173,
     gid: 65,
     ar_dua: """مُطِرْنَا بِفَضْلِ اللهِ وَرَحْمَتِهِ""",
@@ -1670,7 +1844,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[65].name,
+    subtitle: "Asking for clear skies ",
+    audio: "174hm.mp3",
     id: 174,
     gid: 66,
     ar_dua: """اللَّهُمَّ حَوَالَيْنَا وَلَا عَلَيْنَا، اللَّهُمَّ عَلَى الآكَامِ وَالظِّرَابِ، وَبُطُونِ الأوْدِيَةِ، وَمَنَابِتِ الشَّجَرِ""",
@@ -1679,7 +1854,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[66].name,
+    subtitle: "Upon sighting the crescent moon ",
+    audio: "175hm.mp3",
     id: 175,
     gid: 67,
     ar_dua: """اللهُ أَكْبَرُ، اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالأمْنِ وَالإيْمَانِ، والسَّلامَةِ والإسْلامِ، وَالتَّوْفِيْقِ لِمَا تُحِبُّ رَبَّنَا وَتَرْضَى، رَبُّنَا وَرَبُّكَ اللهُ""",
@@ -1688,7 +1864,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[67].name +' #1',
+    subtitle: "Upon breaking fast #1",
+    audio: "176hm.mp3",
     id: 176,
     gid: 68,
     ar_dua: """ذَهَبَ الظَّمَأُ، وَابْتَلَّتِ العُرُوقُ، وَثَبَتَ الأجْرُ إِنْ شَاءَ اللهُ""",
@@ -1697,7 +1874,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[67].name +' #2',
+    subtitle: "Upon breaking fast #2",
+    audio: "177hm.mp3",
     id: 177,
     gid: 68,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ، أَنْ تَغْفِرَ لِي""",
@@ -1706,7 +1884,8 @@ Reply:' May Allah bless every thing that He allots to you ! May Allah reward you
   ),
 
   DContent(
-    subtitle: duaData[68].name +' #1',
+    subtitle: "Supplication before eating #1",
+    audio: "178hm.mp3",
     id: 178,
     gid: 69,
     ar_dua: """بِسْمِ اللهِ (في أَوَّلِهِ وَآخِرِهِ)""",
@@ -1716,7 +1895,8 @@ Abû Dâwud [3767](3/347) and At-Tirmidhî [1858](4/288). Also see Ŝaĥîĥ At-
   ),
 
   DContent(
-    subtitle: duaData[68].name +' #2',
+    subtitle: "Supplication before eating #2",
+    audio: "179hm.mp3",
     id: 179,
     gid: 69,
     ar_dua: """(١) اللَّهُمَّ بَارِكْ لَنَا فِيْهِ، وَأَطْعِمْنَا خَيْراً مِنْهُ
@@ -1729,7 +1909,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[69].name +' #1',
+    subtitle: "Upon completion of a meal #1",
+    audio: "180hm.mp3",
     id: 180,
     gid: 70,
     ar_dua: """الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هـَذَا، وَرَزَقَنِيْهِ، مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ""",
@@ -1738,7 +1919,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[69].name +' #2',
+    subtitle: "Upon completion of a meal #2",
+    audio: "181hm.mp3",
     id: 181,
     gid: 70,
     ar_dua: """الْحَمْدُ لِلَّهِ حَمْداً كَثِيْراً طَيِّباً مُبَارَكاً فِيْهِ، غَيْرَ [مَكْفِيٍّ وَلَا] مُوَدَّعٍ، وَلَا مُسْتَغْنىً عَنْهُ رَبُّنَا""",
@@ -1747,7 +1929,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[70].name,
+    subtitle: "Supplication of the guest for the host ",
+    audio: "182hm.mp3",
     id: 182,
     gid: 71,
     ar_dua: """اللَّهُمَّ بَارِكْ لَهُمْ فِيْمَا رَزَقْتَهُمْ، وَاغْفِرْ لَهُمْ، وَارْحَمْهُمْ""",
@@ -1756,7 +1939,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[71].name,
+    subtitle: "Supplication said to one offering a drink or to one who intended to do that ",
+    audio: "183hm.mp3",
     id: 183,
     gid: 72,
     ar_dua: """اللَّهُمَّ أَطْعِمْ مَنْ أَطْعَمَنِي، وَاسْقِ مَنْ سَقَانِي""",
@@ -1765,7 +1949,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[72].name,
+    subtitle: "Supplication said when breaking fast in someone's home ",
+    audio: "184hm.mp3",
     id: 184,
     gid: 73,
     ar_dua: """أَفْطَرَ عِنْدَكُمُ الصَّائِمُونَ، وَأَكَلَ طَعَامَكُمُ الأبْرَارُ، وَصَلَّتْ عَلَيْكُمُ المَلائِكَةُ""",
@@ -1774,7 +1959,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[73].name,
+    subtitle: "Supplication said by one fasting when presented with food and does not break his fast ",
+    audio: "",
     id: 185,
     gid: 74,
     ar_dua: """إذَا دُعِيَ أحَدُكُمْ فَلْيُجِبْ، فَإنْ كَانَ صَائِمًا فَلْيُصَلِّ، وَ إنْ كَانَ مُفْطِراً فَلْيَطْعَمْ (وَ مَعنَى فَلْيُصَلِّ؛ أيْ: فَلْيَدْعُ)""",
@@ -1783,7 +1969,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[74].name,
+    subtitle: "If insulted while fasting #1",
+    audio: "186hm.mp3",
     id: 186,
     gid: 75,
     ar_dua: """إِنِّي صَائِمٌ، إِنِّي صَائِمٌ""",
@@ -1792,7 +1979,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[75].name,
+    subtitle: "Supplication said upon seeing the early or premature fruit ",
+    audio: "187hm.mp3",
     id: 187,
     gid: 76,
     ar_dua: """اللَّهُمَّ بَارِكْ لَنَا فِي ثَمَرِنَا، وَبَارِكْ لَنَا فِي مَدِيْنَتِنَا، وَبَارِكْ لَنَا فِي صَاعِنَا، وَبَارِكْ لَنَا فِي مُدِّنَا""",
@@ -1801,7 +1989,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[76].name,
+    subtitle: "Supplication said upon sneezing ",
+    audio: "188hm.mp3",
     id: 188,
     gid: 77,
     ar_dua: """(١) الْحَمْدُ للهِ 
@@ -1812,7 +2001,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[77].name,
+    subtitle: "What to say to a kâfir who praises Allah after sneezing ",
+    audio: "189hm.mp3",
     id: 189,
     gid: 78,
     ar_dua: """يَهْدِيْكُمُ اللهُ، وَيُصْلِحُ بَالَكُمْ""",
@@ -1821,7 +2011,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[78].name,
+    subtitle: "Supplication said to the newly wed ",
+    audio: "190hm.mp3",
     id: 190,
     gid: 79,
     ar_dua: """بَارَكَ اللّهُ لَكَ، وَبَارَكَ عَلَيْكَ، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ""",
@@ -1830,7 +2021,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[79].name,
+    subtitle: "The groom's supplication on the wedding night or when buying an animal ",
+    audio: "191hm.mp3",
     id: 191,
     gid: 80,
     ar_dua: """اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَخَيْرَ مَا جَبَلْتَهَا عَلَيْهِ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا، وَشَرِّ مَا جَبَلْتَهَا عَلَيْهِ""",
@@ -1839,7 +2031,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[80].name,
+    subtitle: "Supplication before sexual intercourse ",
+    audio: "192hm.mp3",
     id: 192,
     gid: 81,
     ar_dua: """بِسْمِ اللهِ، اللَّهُمَّ جَنِّبْنَا الشَّيْطَانَ، وَجَنِّبِ الشَّيْطانَ مَا رَزَقْتَنَا""",
@@ -1848,7 +2041,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[81].name,
+    subtitle: "When angry ",
+    audio: "193hm.mp3",
     id: 193,
     gid: 82,
     ar_dua: """أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ""",
@@ -1857,7 +2051,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[82].name,
+    subtitle: "Supplication said upon seeing someone in trial or tribulation ",
+    audio: "194hm.mp3",
     id: 194,
     gid: 83,
     ar_dua: """الْحَمْدُ لِلَّهِ الَّذِيْ عَافَانِي مِمَّا ابْتَلاكَ بِهِ، وَفَضَّلَنِي عَلَى كَثِيْرٍ مِمَّنْ خَلَقَ تَفْضِيْلاً""",
@@ -1866,7 +2061,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[83].name,
+    subtitle: "Remembrance said at a sitting or gathering, etc... ",
+    audio: "195hm.mp3",
     id: 195,
     gid: 84,
     ar_dua: """رَبِّ اغْفِرْ لي، وَتُبْ عَلَـيَّ، إِنَّكَ أَنْتَ التَّوَّابُ الغَفُورُ""",
@@ -1875,7 +2071,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[84].name,
+    subtitle: "Supplication for the expiation of sins said at the conclusion of a sitting or gathering, etc... ",
+    audio: "196hm.mp3",
     id: 196,
     gid: 85,
     ar_dua: """سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ""",
@@ -1884,7 +2081,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[85].name,
+    subtitle: "Replying to a supplication of forgiveness #1",
+    audio: "197hm.mp3",
     id: 197,
     gid: 86,
     ar_dua: """وَلَكَ""",
@@ -1893,7 +2091,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[86].name,
+    subtitle: "Supplication said to one who does you a favor ",
+    audio: "198hm.mp3",
     id: 198,
     gid: 87,
     ar_dua: """جَزَاكَ اللهُ خَيْراً""",
@@ -1902,7 +2101,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[87].name,
+    subtitle: "Protection from the Dajjâl ",
+    audio: "",
     id: 199,
     gid: 88,
     ar_dua: """مَنْ حَفِظَ عَشَرَ آيَاتٍ مِنْ أوُّلِ سُورَةِ الكَهْفِ، عُصِمَ مِنَ الدَّجَّالِ""",
@@ -1911,7 +2111,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[88].name,
+    subtitle: "Supplication said to one who pronounces his love for you, for Allah's sake ",
+    audio: "200hm.mp3",
     id: 200,
     gid: 89,
     ar_dua: """أَحَبَّكَ الَّذِيْ أَحْبَبْتَنِي لَهُ""",
@@ -1920,7 +2121,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[89].name,
+    subtitle: "Supplication said to one who has offered you some of his wealth ",
+    audio: "201hm.mp3",
     id: 201,
     gid: 90,
     ar_dua: """بَارَكَ اللهُ لَكَ في أَهْلِكَ وَمالِكَ""",
@@ -1929,7 +2131,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[90].name,
+    subtitle: "Supplication said to the debtor when his debt is settled ",
+    audio: "202hm.mp3",
     id: 202,
     gid: 91,
     ar_dua: """بَارَكَ اللهُ لَكَ في أَهْلِكَ وَمالِك، إِنَّمَا جَزَاءُ السَّلَفِ الْحَمْدُ والأَدَاءُ""",
@@ -1938,7 +2141,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[91].name,
+    subtitle: "Supplication for fear of Shirk ",
+    audio: "203hm.mp3",
     id: 203,
     gid: 92,
     ar_dua: """اللَّهُمَّ إِنِّي أَعُوذُبِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ""",
@@ -1947,7 +2151,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[92].name,
+    subtitle: "Returning a supplication after having bestowed a gift or charity upon someone ",
+    audio: "204hm.mp3",
     id: 204,
     gid: 93,
     ar_dua: """وَفِيْكَ بَارَكَ اللهُ""",
@@ -1956,7 +2161,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[93].name,
+    subtitle: "Forbiddance of ascribing things to omens ",
+    audio: "205hm.mp3",
     id: 205,
     gid: 94,
     ar_dua: """اللَّهُمَّ لَا طَيْرَ إِلَّا طَيْرُكَ، وَلَا خَيْرَ إِلَّا خَيْرُكَ، وَلَا إِلَهَ غَيْرُكَ""",
@@ -1965,7 +2171,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[94].name,
+    subtitle: "Supplication said when mounting an animal or any means of transport ",
+    audio: "206hm.mp3",
     id: 206,
     gid: 95,
     ar_dua: """بِسْمِ اللهِ، وَالْحَمْدُ لِلَّهِ ﴿سُبْحَانَ الَّذِيْ سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِيْنَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ﴾ الحَمْدُ لِلَّهِ، الحَمْدُ لِلَّهِ، الحَمْدُ لِلَّهِ، اللهُ أكْبَرُ، اللهُ أكْبَرُ، اللهُ أكْبَرُ، سُبْحَانَكَ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِيْ، فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ""",
@@ -1974,7 +2181,8 @@ If one is given milk, recite the following instead:
   ),
 
   DContent(
-    subtitle: duaData[95].name,
+    subtitle: "Supplication for travel ",
+    audio: "207hm.mp3",
     id: 207,
     gid: 96,
     ar_dua: """(١) اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ ﴿سُبْحَانَ الَّذِيْ سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِيْنَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ﴾ اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى، وَمِنَ الْعَمَلِ مَا تَرْضَى، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا وَاطْوِعَنَّا بُعْدَهُ، اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَلِيْفَةُ فِي الأَهْلِ، اللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكآبَةِ الْمَنْظَرِ وَسُوءِ المُنْقَلَبِ فِي الْمَالِ وَالأَهْلِ
@@ -1987,7 +2195,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[96].name,
+    subtitle: "Supplication upon entering a town or village, etc... ",
+    audio: "208hm.mp3",
     id: 208,
     gid: 97,
     ar_dua: """اللَّهُمَّ رَبَّ السَّمَوَاتِ السَّبْعِ وَمَا أَظْلَلْنَ، وَرَبَّ الأَرْاضِيْنَ السَّبْعِ وَمَا أقْلَلْنَ، وَرَبَّ الشَّيَاطِيْنِ وَمَا أَضْلَلْنَ، وَرَبَّ الرِّيَاحِ وَمَا ذَرَيْنَ، أَسْأَلُكَ خَيْرَ هَذِهِ الْقَرْيَةِ وَخَيْرَ أَهْلِهَا، وَخَيْرَ مَا فِيْهَا، وَأَعُوذُ بِكَ مِنْ شَـرِّهَا، وَشَرِّ أَهْلِهَا، وَشَرِّ مَا فِيْهَا""",
@@ -1996,7 +2205,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[97].name,
+    subtitle: "When entering the market ",
+    audio: "209hm.mp3",
     id: 209,
     gid: 98,
     ar_dua: """لَا إلَهَ إلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ، يُحْيِي وَيُمِيْتُ، وَهُوَ حَيٌّ لَا يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ""",
@@ -2005,7 +2215,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[98].name,
+    subtitle: "Supplication for when the mounted animal (or means of transport) stumbles ",
+    audio: "210hm.mp3",
     id: 210,
     gid: 99,
     ar_dua: """بِسْمِ اللهِ""",
@@ -2014,7 +2225,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[99].name,
+    subtitle: "Supplication of the traveller for the resident ",
+    audio: "211hm.mp3",
     id: 211,
     gid: 100,
     ar_dua: """أَسْتَوْدِعُكُمُ اللَّهَ، الَّذِيْ لَا تَضِيْعُ وَدَائِعُهُ""",
@@ -2023,7 +2235,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[100].name +' #1',
+    subtitle: "Supplication of the resident for the traveller #1",
+    audio: "212hm.mp3",
     id: 212,
     gid: 101,
     ar_dua: """أَسْتَوْدِعُ اللَّهَ دِيْنَكَ، وَأَمَانَتَكَ، وَخَوَاتِيْمَ عَمَلِكَ""",
@@ -2032,7 +2245,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[100].name +' #2',
+    subtitle: "Supplication of the resident for the traveller #2",
+    audio: "213hm.mp3",
     id: 213,
     gid: 101,
     ar_dua: """زَوَّدَكَ اللَّهُ التَّقْوَى، وَغَفَرَذَنْبَكَ، وَيَسَّرَ لَكَ الخَيْرَ حَيْثُمَا كُنْتَ""",
@@ -2041,7 +2255,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[101].name,
+    subtitle: "Remembrance while ascending or descending ",
+    audio: "214hm.mp3",
     id: 214,
     gid: 102,
     ar_dua: """(١) اللهُ أَكْبَرُ<br>
@@ -2051,7 +2266,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[102].name,
+    subtitle: "Prayer of the traveller as dawn approaches ",
+    audio: "215hm.mp3",
     id: 215,
     gid: 103,
     ar_dua: """سَمَّعَ سَامِعٌ بِحَمْدِ اللهِ، وَحُسْنِ بَلائِهِ عَلَيْنَا،.رَبَّنَا صَاحِبْنَا، وَأَفْضِلْ عَلَيْنَا عَائِذاً باللهِ مِنَ النَّارِ""",
@@ -2060,7 +2276,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[103].name,
+    subtitle: "Stopping or lodging somewhere ",
+    audio: "216hm.mp3",
     id: 216,
     gid: 104,
     ar_dua: """أَعُوذُ بِكَلِمَاتِ اللّهِِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ""",
@@ -2069,7 +2286,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[104].name,
+    subtitle: "While returning from travel ",
+    audio: "217hm.mp3",
     id: 217,
     gid: 105,
     ar_dua: """اللهُ أَكْبَرُ، اللهُ أَكْبَرُ، اللهُ أَكْبَرُ، لَا إلَهَ إلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لهُ، لهُ المُلْكُ وَ لَهُ الحَمْدُ، وهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ، آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنَا حـَامِدُونَ، صَدَقَ اللهُ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الأحْزَابَ وَحْدَهُ""",
@@ -2078,7 +2296,8 @@ Upon returning the same supplication is recited with the following addition:
   ),
 
   DContent(
-    subtitle: duaData[105].name,
+    subtitle: "Supplication after receiving good or bad news ",
+    audio: "218hm.mp3",
     id: 218,
     gid: 106,
     ar_dua: """(١) الحَمْدُ لِلَّهِ الَّذِيْ بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ
@@ -2090,7 +2309,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[106].name +' #1',
+    subtitle: "Excellence of sending prayers upon the Prophet (May Allah send blessings and peace upon him) #1",
+    audio: "",
     id: 219,
     gid: 107,
     ar_dua: """قَالَ ﷺ: «مَنْ صَلَّ عَلَيَّ صَلاةً صَلَّ اللهُ عَلَيْهِ بِهَا عَشَراً»""",
@@ -2099,7 +2319,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[106].name +' #2',
+    subtitle: "Excellence of sending prayers upon the Prophet (May Allah send blessings and peace upon him) #2",
+    audio: "",
     id: 220,
     gid: 107,
     ar_dua: """قَالَ ﷺ: «لا تَجْعَلُوا قَبْرِيْ عِيْداً وَ صَلُّوا عَلَيَّ فَإِنَّ صَلاتَكُمْ تَبْلُغُنِي حَيْثُ كُنْتُمْ»""",
@@ -2108,7 +2329,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[106].name +' #3',
+    subtitle: "Excellence of sending prayers upon the Prophet (May Allah send blessings and peace upon him) #3",
+    audio: "",
     id: 221,
     gid: 107,
     ar_dua: """قَالَ ﷺ: «البَخِيْلُ مَنْ ذُكِرْتُ عِنْدَهُ فَلَمْ يُصَلِّ عَلَيَّ»""",
@@ -2117,7 +2339,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[106].name +' #4',
+    subtitle: "Excellence of sending prayers upon the Prophet (May Allah send blessings and peace upon him) #4",
+    audio: "",
     id: 222,
     gid: 107,
     ar_dua: """قَالَ ﷺ: «إنَّ لِلَّهِ مَلائِكَةً سَيَّا حِيْنَ فِي الأرْضِ، يُبَلِّغُونِي مِنْ أُمَّتِي السَّلامَ»""",
@@ -2126,7 +2349,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[106].name +' #5',
+    subtitle: "Excellence of sending prayers upon the Prophet (May Allah send blessings and peace upon him) #5",
+    audio: "",
     id: 223,
     gid: 107,
     ar_dua: """قَالَ ﷺ: «مَا مِنْ أحَدٍ يُسَلِّمُ عَلَيَّ، إلَّا رَدَّ اللهُ عَلَيَّ رُوْحي، حَتَّى أرُدَّ عَلَيْهِ السَّلامَ»""",
@@ -2135,7 +2359,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[107].name +' #1',
+    subtitle: "Excellence of spreading the Islamic greeting #1",
+    audio: "",
     id: 224,
     gid: 108,
     ar_dua: """قَالَ ﷺ: «لا تَدْخُلُوا الجَنَّة حَتَّى تُؤمِنُوا، وَ لَا تُؤمِنُوا حَتَّى تَحَابُّوا، أَوَلَا أدُلُّكُمْ عَلَى شَيْءٍ إذَا فَعَلْتُمُوهُ تَحَابَبْتُمْ، أَفْشُوا السَّلامَ بَيْنَكُمْ»""",
@@ -2144,7 +2369,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[107].name +' #2',
+    subtitle: "Excellence of spreading the Islamic greeting #2",
+    audio: "",
     id: 225,
     gid: 108,
     ar_dua: """قَالَ عمار بن ياسر(رضي الله عنه): «ثَلاثٌ مَنْ جَمَعَهُنَّ فَقَدْ جَمَعَ الإيْمَانَ: الإنْصَافُ مِنْ نَفْسِكَ، و بَذْلُ السَّلامِ لِلْعَالَمِ، و الإنْفَاقُ مِنَ الإقْتَارِ»""",
@@ -2153,7 +2379,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[107].name +' #3',
+    subtitle: "Excellence of spreading the Islamic greeting #3",
+    audio: "",
     id: 226,
     gid: 108,
     ar_dua: """وَ عَنْ عَبْدِاللهِ بِنْ عَمْرٍو(رضي الله عنه): «أنَّ رَجُلاً سَأَلَ النَّبِيَّ ﷺ أيُّ الإسْلامِ خَيْرٌ؟» قَالَ: «تُطْعِمُ الطَّعَامَ، وَتَقْرَأُ السَّلامَ عَلَى مَنْ عَرَفْتَ وَ مَنْ لَمْ تَعْرِف»
@@ -2164,7 +2391,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[108].name,
+    subtitle: "How to reply to the Salâm of a Kâfir ",
+    audio: "227hm.mp3",
     id: 227,
     gid: 109,
     ar_dua: """وَ عَلَيْكُمْ""",
@@ -2173,7 +2401,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[109].name,
+    subtitle: "Supplication after hearing a rooster crow or a donkey bray ",
+    audio: "228hm.mp3",
     id: 228,
     gid: 110,
     ar_dua: """إذَا سَمِعْتُمْ صِيَاحَ الدِّيَكَةِ فَاسْألُوا اللهَ مِنْ فَضْلِهِ؛ فَإنَّهَا رَأَتْ مَلَكاً، وَ إذَا سَمِعْتُمْ نَهِيْقَ الحِمَارِ فَتَعوَّذُوا بِااللهِ مِنَ الشَّيْطَانِ؛ فَإنَّهُ رَأى شَيْطَانًا""",
@@ -2182,7 +2411,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[110].name,
+    subtitle: "Supplication upon hearing the barking of dogs at night ",
+    audio: "229hm.mp3",
     id: 229,
     gid: 111,
     ar_dua: """أَعُوذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ""",
@@ -2191,7 +2421,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[111].name,
+    subtitle: "Supplication said for one you have insulted ",
+    audio: "230hm.mp3",
     id: 230,
     gid: 112,
     ar_dua: """اللَّهُمَّ فأَيُّمَا مُؤْمِنٍ سَبَبْتُهُ؛ فَاجْعَلْ ذَلِكَ لَهُ قُرْبَةً إلَيْكَ يَوْمَ القِيَامَةِ""",
@@ -2200,7 +2431,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[112].name,
+    subtitle: "The etiquette of praising a fellow Muslim ",
+    audio: "",
     id: 231,
     gid: 113,
     ar_dua: """قَالَ ﷺ: «إذَا كَانَ أحَدُكُمْ مَادِحاً صَاحِبَهُ لَا مَحَالَةَ؛ فَلْيَقُل: أحْسِبُ فُلَانًا: وَ اللهُ حَسِيْبُهُ، وَ لَا أُزَكِّي عَلَى اللهِ أحَداً: أحْسِبُهُ – إنْ كَانَ يَعْلمُ ذَاكَ – كَذَا وَ كَذَا»""",
@@ -2209,7 +2441,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[113].name,
+    subtitle: "For the one that has been praised ",
+    audio: "232hm.mp3",
     id: 232,
     gid: 114,
     ar_dua: """اللَّهُمَّ لَا تُؤَاخِذْنِي بِمَا يَقُولُونَ، وَ اغْفِرْ لِي مَا لاَ يَعْلَمُونَ [وَ اجْعَلْنِي خَيْراً مِمَّا يَظُنُّونَ]""",
@@ -2218,7 +2451,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[114].name,
+    subtitle: "The Talbiyah for the one doing Ĥajj or 'Umra ",
+    audio: "233hm.mp3",
     id: 233,
     gid: 115,
     ar_dua: """لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لاَ شَرِيْكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ والنِّعْمَةَ، لَكَ وَالمُلْكَ، لَا شَرِيْكَ لَكَ""",
@@ -2227,7 +2461,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[115].name,
+    subtitle: "The Takbîr passing the black stone ",
+    audio: "234hm.mp3",
     id: 234,
     gid: 116,
     ar_dua: """اللهُ أَكْبَرُ""",
@@ -2236,7 +2471,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[116].name,
+    subtitle: "Between the Yemeni corner and the black stone ",
+    audio: "235hm.mp3",
     id: 235,
     gid: 117,
     ar_dua: """﴿رَبَّنَا آتِنَا في الدُّنْيَا حَسَنَةً وفي الآخِرَةِ حَسَنَةً وقِنَا عَذَابَ النَّارِ﴾""",
@@ -2246,7 +2482,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[117].name,
+    subtitle: "When at Mount Ŝaffâ and Mount Marwah ",
+    audio: "236hm.mp3",
     id: 236,
     gid: 118,
     ar_dua: """لَمَّا دَنَا النَّبِيُّ ﷺ مِنَ الصَّفَا قَرَأ: ﴿إنَّ الصَّفَا وَ المَرْوَةَ مِنْ شَعَائِرِ اللهِ﴾«أبْدَأ بِمَا بَدَأ اللهُ بِهِ» فَبَدأ بِالصَّفَا، فَرَقِيَ عَلَيْهِ، حَتَّى رَأَى البَيْتَ، فَاسْتَقْبَلَ القِبْلَةَ، فَوَحَّدَ اللهَ، وَ كَبَّرَهُ، وَ قَالَ: «لَا إلَهَ إلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ المُلْكُ وَ لَهُ الحَمْدُ، وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ، لَا إلَهَ إلَّا اللهٌ وَ حْدَهُ، أنْجَزَ وَعْدَهُ، وَ نَصَرَ عَبْدَهُ، وَ هَزَمَ الأَحْزَابَ وَحْدَهُ، ثُمَّ دَعَا بَيْنَ ذَلِكَ، قَالَ مِثْلَ هَذَا ثَلَاثَ مَرَّاتٍ...، الحَدِيْثُ، وَ فِيْهِ: فَفَعَلَ عَلَى المَرْوَةِ كَمَا فَعَلَ عَلَى الصَّفَا»""",
@@ -2255,7 +2492,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[118].name,
+    subtitle: "On the Day of 'Arafah ",
+    audio: "237hm.mp3",
     id: 237,
     gid: 119,
     ar_dua: """لَا إلَهَ إلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ المُلْكُ، ولَهُ الحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ""",
@@ -2264,7 +2502,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[119].name,
+    subtitle: "At the Sacred Site (Al-Mash'ar Al-Harâm) ",
+    audio: "",
     id: 238,
     gid: 120,
     ar_dua: """رَكِبَ ﷺ القَصْوَاءَ حَتَّى أتَى المَشْعَرَ الحَرَامَ، فَاسْتَقْبَلَ القِبْلَةَ (فَدَعَاهُ، وَ كَبَّرَهُ، وَ هَلَّلَهُ، وَ وَحَّدَهُ) فَلَمْ يَزَلْ وَاقِفًا حَتَّى أسْفَرَ جِدّاً، فَدَفَعَ قَبْلَ أنْ تَطْلُعَ الشَّمْسُ""",
@@ -2273,7 +2512,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[120].name,
+    subtitle: "Supplication for throwing a pebble at the Jamarât ",
+    audio: "239hm.mp3",
     id: 239,
     gid: 121,
     ar_dua: """يُكَبِّرُ كُلَّمَا رَمَى بِحَصَاةٍ عِنْدَ الجِمَارِ الثَّلاثِ، ثُمَّ يَتَقَدَّمُ، وَ يَقِفُ يَدْعُوْ مُسْتَقْبِلَ القِبْلَةَ، رَافِعاً يَدَيْهِ بَعْدَ الجَمْرَةِ الأوْلَى وَ الثَّانِيَةِ، أمَّا جَمْرَةُ العَقَبَةِ فَيَرْمِيْهَا، وَ يُكَبِّرُ عِنْدَ كُلِّ حَصَاةٍ، وَ يَنْصَرِفُ، وَ لَا يَقِفُ عِنْدَهَا""",
@@ -2282,7 +2522,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[121].name +' #1',
+    subtitle: "What to say at times of amazement and delight #1",
+    audio: "240hm.mp3",
     id: 240,
     gid: 122,
     ar_dua: """سُبْحَانَ اللهِ!""",
@@ -2291,7 +2532,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[121].name +' #1',
+    subtitle: "What to say at times of amazement and delight #2",
+    audio: "241hm.mp3",
     id: 241,
     gid: 122,
     ar_dua: """اللهُ أَكْبَرُ""",
@@ -2300,7 +2542,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[122].name,
+    subtitle: "What to do upon receiving pleasant news ",
+    audio: "",
     id: 242,
     gid: 123,
     ar_dua: """كَانَ النَّبِيُّ ﷺ إذَا أتَاهُ أَمْرٌ يَسُرُّهُ أَوْ يُسَرُّ بِهِ؛ خَرَّ سَاجِداً شُكْراً لله تَبَارَكَ وَ تَعَالَى""",
@@ -2309,7 +2552,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[123].name,
+    subtitle: "What to say and do when feeling some pain in the body ",
+    audio: "243hm.mp3",
     id: 243,
     gid: 124,
     ar_dua: """بِسْمِ اللهِ (ثَلاثاً)
@@ -2319,7 +2563,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[124].name,
+    subtitle: "What to say when in fear of afflicting something or someone with one's eye ",
+    audio: "244hm.mp3",
     id: 244,
     gid: 125,
     ar_dua: """اللَّهُمَّ بَارِك عَلَيْهِ""",
@@ -2328,7 +2573,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[125].name,
+    subtitle: "What to say when startled ",
+    audio: "245hm.mp3",
     id: 245,
     gid: 126,
     ar_dua: """لَا إلَهَ إلَّا اللهُ""",
@@ -2337,7 +2583,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[126].name,
+    subtitle: "When slaughtering or offering a sacrifice ",
+    audio: "246hm.mp3",
     id: 246,
     gid: 127,
     ar_dua: """بِسْمِ اللهِ واللهُ أَكْبَرُ [اللَّهُمَّ مِنْكَ ولَكَ] اللَّهُمَّ تَقَبَّلْ مِنِّي""",
@@ -2346,7 +2593,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[127].name,
+    subtitle: "What is said to ward off the deception of the Obstinate Shaytaans ",
+    audio: "247hm.mp3",
     id: 247,
     gid: 128,
     ar_dua: """أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ، الَّتِي لَا يُجَاوِزُهُنَّ بَرٌّ ولَا فَاجِرٌ مِنْ شَرِّ مَا خَلقَ، وبَرَأَ وذَرَأَ، ومِنْ شَرِّ مَا يَنْزِلُ مِنَ السَّمَاءِ، وِمنْ شَرِّ مَا يَعْرُجُ فِيْهَا، ومِنْ شَرِّ مَا ذَرَأَ فِي الأَرْضِ، ومِنْ شَرِّ مَا يَخْرُجُ مِنْهَا، وِمنْ شَرِّ فِتَنِ اللَّيْلِ والنَّهَارِ، ومِنْ شَرِّ كُلِّ طَارِقٍ إِلَّا طَارِقاً يَطْرُقُ بِخَيْرٍ يَا رَحْمَنُ""",
@@ -2355,7 +2603,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[128].name +' #1',
+    subtitle: "Seeking forgiveness and repentance #1",
+    audio: "",
     id: 248,
     gid: 129,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «وَ اللهِ إِنِّي لأسْتَغْفِرُ اللهَ وَ أ تُوبُ إلَيْهِ فِي اليَوْمِ أكثَرَ مِنْ سَبْعِيْنَ مَرَّةٍ»""",
@@ -2364,7 +2613,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[128].name +' #2',
+    subtitle: "Seeking forgiveness and repentance #2",
+    audio: "",
     id: 249,
     gid: 129,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «يَا أَيُّهَا النَّاسُ تُوبُوا إلَى اللهِ، فَإِنِّي أتُوبُ إلَيْهِ مِئَةَ مَرَّةٍ»""",
@@ -2373,7 +2623,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[128].name +' #3',
+    subtitle: "Seeking forgiveness and repentance #3",
+    audio: "250hm.mp3",
     id: 250,
     gid: 129,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «مَنْ قَالَ أسْتَغْفِرُ اللهَ العَظِيْمَ الَّذِي لَا إلَهَ إلَّا هُوَ الحَيُّ القَيُّومُ وَ أتُوبُ إلَيْهِ، غَفَرَ للهُ لَهُ، وَ إنْ كَانَ فَرَّ مِنَ الزَّحْفِ»""",
@@ -2382,7 +2633,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[128].name +' #4',
+    subtitle: "Seeking forgiveness and repentance #4",
+    audio: "",
     id: 251,
     gid: 129,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «أقْرَبُ مَا يَكُونُ الرَّبُّ مِنَ العَبْدِ، فِي جَوْفِ اللَّيْلِ الآخِرِ؛ فَإنْ اسْتَطَعْتَ أنْ تَكُونَ مِمَّنْ يَذْكُرُ اللهَ فِي تِلْكَ السَّاعَةِ؛ فَكُنْ»""",
@@ -2391,7 +2643,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[128].name +' #5',
+    subtitle: "Seeking forgiveness and repentance #5",
+    audio: "",
     id: 252,
     gid: 129,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «أقْرَبُ مَا يَكُونُ العَبْدُ مِنْ رَبِّهِ، وَ هُوَ سَاجِدٌ فَأكْثِرُوا الدُّعَاءَ»""",
@@ -2400,7 +2653,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[128].name +' #6',
+    subtitle: "Seeking forgiveness and repentance #6",
+    audio: "",
     id: 253,
     gid: 129,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «إنَّهُ لَيُغَانُ عَلَى قَلْبِي، وَ إنِّي لأسْتَغْفِرُ اللهَ فِي اليَوْمِ مِئَةَ مَرَّةٍ»""",
@@ -2409,7 +2663,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #1',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #1",
+    audio: "254hm.mp3",
     id: 254,
     gid: 130,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «مَنْ قَالَ: سُبْحَانَ اللهِ وَ بِحَمْدِهِ فِي يَومٍ مِئَةَ مَرَّةٍ، حُطَّتْ خَطَايَاهُ، وَ لَو كَانَتْ مِثْلَ زَبَدِ البَحْرِ»""",
@@ -2418,7 +2673,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #2',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #2",
+    audio: "255hm.mp3",
     id: 255,
     gid: 130,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «مَنْ قَالَ: لَا إلَهَ إلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ المُلْكُ، وَ لَهُ الحَمْدُ، وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ عَشْرَ مِرَارٍ، كَانَ كَمَنْ أعْتَقَ أرْبَعَةَ أنْفُسٍ مِنْ وَلَدِ إسْمَاعِيلَ»""",
@@ -2427,7 +2683,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #3',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #3",
+    audio: "256hm.mp3",
     id: 256,
     gid: 130,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «كَلِمَتَانِ خَفِيفَتَانِ عَلَى اللِّسَانِ، ثَقِيلَتَانِ فِي الِميْزَانِ، حَبِيبَتَانِ إلَى الرَّحْمَنِ: سُبْحَانَ اللهِ وَ بِحَمْدِهِ، سُبْحَانَ اللهِ العَظِيْمِ»""",
@@ -2436,7 +2693,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #4',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #4",
+    audio: "257hm.mp3",
     id: 257,
     gid: 130,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «لَأنْ أقُولَ: سُبْحَانَ اللهِ، وَ الحَمْدُ لِلَّهِ، وَ لَا إلَهَ إلَّا اللهُ، وَ اللهُ أكْبَرُ، أحَبُّ إلَيَّ مِمَّا طَلَعَتْ عَلَيْهِ الشَّمْسُ»""",
@@ -2445,7 +2703,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #5',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #5",
+    audio: "258hm.mp3",
     id: 258,
     gid: 130,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «أيَعْجِزُ أحَدُكُمْ أنْ يَكْسِبَ كُلَّ يَوْمٍ ألْفَ حَسَنَةٍ» فَسَألَهُ سَائِلٌ مِنْ جُلَسَائِهِ: كَيْفَ يَكْسِبُ أحَدُنَا ألْفَ حَسَنَةٍ؟ قَالَ: «يُسَبِّحُ مِئَةَ تَسْبِيْحَةٍ، فَيُكْتَبُ لَهُ ألْفُ حَسَنَةٍ، أوْ يُحَطُّ عَنْهُ ألْفُ خَطِيْئَةٍ»""",
@@ -2454,7 +2713,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #6',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #6",
+    audio: "259hm.mp3",
     id: 259,
     gid: 130,
     ar_dua: """قَالَ رَسُولُ اللهِ ﷺ: «مَنْ قَالَ: سُبْحَانَ اللهِ العَظِيمِ وَ بِحَمْدِهِ، غُرِسَتْ لَهُ نَخْلَةٌ فِي الجَنَّةِ»""",
@@ -2463,7 +2723,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #7',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #7",
+    audio: "260hm.mp3",
     id: 260,
     gid: 130,
     ar_dua: """قَالَ ﷺ: «يَا عَبْدَاللهِ بْنَ قَيْسٍ، ألَا أدُلُّكَ عَلَى كَنْزٍ مِنْ كُنُوزِ الجَنَّةِ؟» فَقُلْتُ: بَلَى يَا رَسُولَ اللهِ، قَالَ: «قُلْ لَا حَوْلَ وَ لَا قُوَّةَ إلَّا بِااللهِ»""",
@@ -2472,7 +2733,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #8',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #8",
+    audio: "261hm.mp3",
     id: 261,
     gid: 130,
     ar_dua: """قَالَ ﷺ: «أحَبُّ الكَلَامِ إلَى اللهِ أرْبَعٌ: سُبْحَانَ اللهِ، وَ الحَمْدُ للهِ، وَ لَا إلَهَ إلَّا اللهُ، وَ اللهُ أكْبَرُ، لَا يَضُرُّكَ بِأيِّهِنَّ بَدَأْتَ»""",
@@ -2481,7 +2743,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #9',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #9",
+    audio: "262hm.mp3",
     id: 262,
     gid: 130,
     ar_dua: """جَاءَ أعْرَابِيٌّ إلَى رَسُولُ اللهِ ﷺ فَقَالَ: عَلِّمْنِي كَلَامًا أقُولُهُ؟ قَالَ: «قُلْ: لَا إلَهَ إلَّا اللهُ وَ حْدَهُ لَا شَرِيكَ لَهُ، اللهُ أكْبَرُ كَبِيْراً، وَ الحَمْدُ للهِ كَثِيْراً، سُبْحَانَ اللهِ رَبِّ العَالَمِيْنَ، لَا حَوْلَ وَ لَا قُوَّةَ إلَّا بِااللهِ العَزِيزِ الحَكِيمِ»، قَالَ: فَهَؤُلَاءِ لِرَبِّي فَمَا لِي؟ قَالَ: «قُلْ: اللهم اغْفِرلِي، وَارْحَمْنِي، واهْدِنِي، وَارْزُقْنِي»""",
@@ -2490,7 +2753,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #10',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #10",
+    audio: "263hm.mp3",
     id: 263,
     gid: 130,
     ar_dua: """كَانَ الرَّجُلُ إذَا أَسْلَمَ عَلَّمَهُ النَّبِيُّ ﷺ الصَّلَاةَ، ثُمَّ أمَرَهُ أنْ يَدْعُوَ بِهَؤُلَاءِ الكَلِمَاتِ: «اللهم اغْفِرْلِي، وَارْحَمْنِي، وَاهْدِنِي، وِ عَافِنِي، وَارْزُقْنِي»""",
@@ -2499,7 +2763,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #11',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #11",
+    audio: "264hm.mp3",
     id: 264,
     gid: 130,
     ar_dua: """إنَّ أفْضَلَ الدُّعَاءِ: الحَمْدُ لِلَّهِ، وَ أفْضَلُ الذِّكْرِ: لَا إلَهَ إلَّا اللهُ""",
@@ -2508,7 +2773,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[129].name +' #12',
+    subtitle: "Excellence of At-Tasbîĥ, At-Taĥmîd, At-Tahlîl and At-Takbîr #12",
+    audio: "265hm.mp3",
     id: 265,
     gid: 130,
     ar_dua: """البَاقِيَاتُ الصَّالِحَاتُ: سُبْحَانَ اللهِ، وَ الحَمْدُللهِ، وَ لَا إلَهَ إلَّا اللهُ، وَ اللهُ أكْبَرُ، وَ لَا حَوْلَ وَ لَا قُوَّةَ إلَّا بِااللهِ""",
@@ -2517,7 +2783,8 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[130].name,
+    subtitle: "How the Prophet (salla Allaahu ʻalayhi wa salaam) made tasbîĥ? ",
+    audio: "",
     id: 266,
     gid: 131,
     ar_dua: """عَنْ عَبْدِ اللهِ بْنِ عَمْروٍ قَالَ: رَأيْتُ النَّبِيَّ يَعْقِدُ التَّسْبِيْحَ بِيَمِيْنِهِ""",
@@ -2526,13 +2793,15 @@ Upon receiving bad news, say: (2) 'All Praise is for Allah in all circumstances.
   ),
 
   DContent(
-    subtitle: duaData[131].name,
+    subtitle: "General and Beneficial rules",
+    audio: "",
     id: 267,
     gid: 132,
     ar_dua: """إذَا كَانَ جُنْحُ اللَّيْل – أوْ أمْسَيْتُم – فَكُفُّوا صِبْيَانَكُمْ؛ فَإنَّ الشَّيَاطِيْنَ تَنْتَشِرُ حِيْنَئَذٍ، فَإذَا ذَهَبَ سَاعَةٌ مِنَ اللَّيْلِ فَخَلُّوهُمْ، وَأغْلقُوا الأبْوَابَ، وَاذْكُرُوا اسْمَ اللهِ؛ فَإنَّ الشَّيْطَانَ لَا يَفْتَحُ بَابًا مُغْلَقًا، وَ أوْكُوا قِرَبَكُمْ، وَاذْكُرُوا اسْمَ اللهِ، وَ خَمِّرُوا آنِيَتَكُمْ وَاذْكُرُوا اسْمَ اللهِ، وَ لَوْ أنْ تَعْرِضُوا عَلَيْهَا شَيْئًا، وَ أطْفِئُوا مَصَابِيْحَكُمْ""",
     en_trans: """When night falls, restrain your children (from going out) because at such time the devils spread about. After a period of time has passed, let them be. Shut your doors and mention Allah’s name, for verily the devil does not open a shut door, tie up your water-skins and mention Allah’s name, cover your vessels with anything and mention Allah’s name and put out your lamps.""",
     en_ref: """Al-Bukhârî [5623](10/88) and Muslim [2012](3/1595).""",
   ),
+
 
 
 

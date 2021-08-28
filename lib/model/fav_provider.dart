@@ -7,8 +7,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:collection';
 import 'package:flutter/cupertino.dart';
 
-class FavProvider with ChangeNotifier{
+class FavProvider with ChangeNotifier {
   List<DContent> duas = [];
+  Set<int> dua_id = {};
 
   FavProvider() {
     initialState();
@@ -36,7 +37,7 @@ class FavProvider with ChangeNotifier{
     return duas.length;
   }
 
-  Future updateSharedPreferences()async {
+  Future updateSharedPreferences() async {
     List<String> myDua = duas.map((f) => json.encode(f.toJson())).toList();
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('duas', myDua);
@@ -45,10 +46,20 @@ class FavProvider with ChangeNotifier{
   Future syncDataWithProvider() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     var result = prefs.getStringList('duas');
-    if(result != null) {
+    if (result != null) {
       duas = result.map((f) => DContent.fromJson(json.decode(f))).toList();
     }
     notifyListeners();
   }
-}
 
+  void add_id(int _id) {
+    dua_id.add(_id);
+    notifyListeners();
+  }
+
+  void remove_id(int _id) {
+    dua_id.remove(_id);
+    notifyListeners();
+  }
+
+}

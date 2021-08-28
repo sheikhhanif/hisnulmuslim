@@ -16,10 +16,24 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     var dualist = Provider.of<FavProvider>(context).duas;
+    if(dualist.isNotEmpty){
+      return Scaffold(
+        body: ContentCardView(duas: dualist),
+        appBar: BuildAppBar(title: 'Favorite Duas'),
+      );
+    }
+    else {
+      return Scaffold(
+        body: Center(
+          child: Text('Favorite duas will appear here\n'
+              ' after you add them',
+          textAlign: TextAlign.center,
+          ),
 
-    return Scaffold(
-      body: ContentCardView(duas: dualist),
-      appBar: BuildAppBar(title: 'Favorite Duas'),
-    );
+        ),
+        appBar: BuildAppBar(title: 'Favorite Duas'),
+      );
+    }
+
   }
 }

@@ -528,13 +528,13 @@ List<Dua> duaData = [
 
   Dua(
       id:69,
-      cid:1,
+      cid:9,
       name: "Supplication before eating"
   ),
 
   Dua(
       id:70,
-      cid:1,
+      cid:9,
       name: "Upon completion of a meal"
   ),
 
