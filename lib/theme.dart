@@ -26,7 +26,7 @@ AppBarTheme appBarTheme() {
     brightness: Brightness.light,
     iconTheme: IconThemeData(color: Colors.teal),
     textTheme: TextTheme(
-      headline6: TextStyle(color: Colors.teal, fontSize: 18),
+      headline6: TextStyle(color: Colors.teal, fontSize: 18.5),
     ),
   );
 }

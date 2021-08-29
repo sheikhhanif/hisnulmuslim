@@ -31,8 +31,10 @@ class CustomSearchDelegate extends SearchDelegate {
   Widget buildResults(BuildContext context) {
     List <Dua> duas = [];
     if (query.length > 2) {
-      duas.addAll(duaData.where((e) => e.name.toLowerCase().contains(query) ||
-          duaContent.where((element) => element.gid == e.id).any((element) => element.en_trans.toLowerCase().split(' ').contains(query) )));
+      duas.addAll(duaData.where((e) => e.name.toLowerCase().contains(query.trim()) ||
+          duaContent.where((element) => element.gid == e.id).any((element) => element.en_trans.toLowerCase().split(' ').contains(query.trim()) ||
+              duaContent.where((element) => element.gid == e.id).any((element) => element.ar_dua.toLowerCase().split(' ').contains(query.trim()))
+          )));
     }
     else
       duas = [];
@@ -43,8 +45,8 @@ class CustomSearchDelegate extends SearchDelegate {
   Widget buildSuggestions(BuildContext context) {
     List <Dua> duas = [];
     if (query.length > 2) {
-      duas.addAll(duaData.where((e) => e.name.toLowerCase().contains(query) ||
-          duaContent.where((element) => element.gid == e.id).any((element) => element.en_trans.toLowerCase().split(' ').contains(query) )));
+      duas.addAll(duaData.where((e) => e.name.toLowerCase().contains(query.trim()) ||
+          duaContent.where((element) => element.gid == e.id).any((element) => element.en_trans.toLowerCase().split(' ').contains(query.trim()) )));
     }
     else
       duas = [];

@@ -51,7 +51,7 @@ List<Category> categoryData = [
 
   Category(
     id: 7,
-    name: 'Purification',
+    name: 'Wudu Toilet',
     image: "assets/images/categories/pure.svg",
   ),
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hisnulmuslim/model/dua_group.dart';
+import 'package:hisnulmuslim/screens/search/search_screen.dart';
 import 'package:hisnulmuslim/widgets/appbarview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: HomeBody(),
-      appBar: BuildAppBar(title: 'Hisnul Muslim'),
+      appBar: BuildAppBar(title: 'Hisnul Muslim',),
     );
   }
 

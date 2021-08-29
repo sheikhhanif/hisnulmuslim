@@ -48,8 +48,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async{
-        if(_selectedIndex == 1)
+      onWillPop: () async {
+        if (_selectedIndex == 1)
           return true;
         setState(() {
           _selectedIndex = 1;
@@ -83,5 +83,5 @@ class _MainScreenState extends State<MainScreen> {
       ],
     );
   }
-}
 
+}
