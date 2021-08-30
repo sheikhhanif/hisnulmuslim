@@ -72,13 +72,13 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
         new PopupMenuItem(child: ListTile(title: Text('Website'),
         onTap: ()async{
           Navigator.of(context).pop();
-          await launch('https://cslesson.org');
+          await launch('https://minbarapps.com');
         },
         )),
         new PopupMenuItem(child: ListTile(title: Text('Facebook'),
         onTap: () async{
           Navigator.of(context).pop();
-          await launch('https://facebook.com/cslesson');
+          await launch('https://facebook.com/minbarapps');
         },
         )),
       ],
@@ -109,7 +109,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
               fontSize: 15, color: Colors.black,
             ),),
             onTap: ()async{
-              await launch('mailto:minbarapps@gmail.com');
+              await launch('mailto:contactminbarapps@gmail.com');
             },
           ),
         ],
