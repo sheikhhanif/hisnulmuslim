@@ -54,7 +54,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
                     ),
                         content: about(),
                     actions: [
@@ -105,7 +105,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),),
 
           InkWell(
-            child: Text("For any issues, please feel free to contact: minbarapps@gmail.com", textAlign: TextAlign.left, style: TextStyle(
+            child: Text("For any issues, please feel free to contact: contactminbarapps@gmail.com", textAlign: TextAlign.left, style: TextStyle(
               fontSize: 15, color: Colors.black,
             ),),
             onTap: ()async{

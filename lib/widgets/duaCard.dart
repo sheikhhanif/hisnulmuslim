@@ -141,7 +141,7 @@ class _ContentCardViewState extends State<ContentCardView> {
                   children:[
                     IconButton(
                       icon: Icon(
-                        Icons.ios_share_outlined,
+                        Icons.ios_share,
                         color: Colors.teal,
                       ),
                       alignment: Alignment.bottomLeft,

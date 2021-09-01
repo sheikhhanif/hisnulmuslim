@@ -46,7 +46,10 @@ class CustomSearchDelegate extends SearchDelegate {
     List <Dua> duas = [];
     if (query.length > 2) {
       duas.addAll(duaData.where((e) => e.name.toLowerCase().contains(query.trim()) ||
-          duaContent.where((element) => element.gid == e.id).any((element) => element.en_trans.toLowerCase().split(' ').contains(query.trim()) )));
+          duaContent.where((element) => element.gid == e.id).any((element) => element.en_trans.toLowerCase().split(' ').contains(query.trim()) ||
+          duaContent.where((element) => element.gid == e.id).any((element) => element.ar_dua.toLowerCase().split(' ').contains(query.trim()))
+      )));
+
     }
     else
       duas = [];
