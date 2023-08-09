@@ -12,9 +12,10 @@ class ContentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dua Category: '+ categoryData[duaData[gid-1].cid-1].name,
+        title: Text('Dua Category : '+ categoryData[duaData[gid-1].cid-1].name,
             style: TextStyle
-              (fontWeight: FontWeight.bold, fontSize: 16, letterSpacing: 1, )
+              (fontWeight: FontWeight.bold, fontSize: 15, letterSpacing: 1, ),
+          textAlign: TextAlign.left,
         ),
       ),
       body: ContentCardView(duas: duas),

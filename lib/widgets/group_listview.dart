@@ -11,15 +11,17 @@ class GroupListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(5),
         itemBuilder: (BuildContext context,  index) {
+          final PageController controller = PageController(initialPage: index);
+
           return Card(
-            elevation: 0.5,
+            elevation: 0.6,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 0.0),
+                    padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 0.0),
                     child: ListTile(
                       leading: Container(
                         padding: EdgeInsets.all(12),
@@ -27,7 +29,7 @@ class GroupListView extends StatelessWidget {
                             "${duas[index].id}",
                             textAlign: TextAlign.center,
                             style: new TextStyle(
-                              color: Colors.black87
+                              color: Colors.black
                             )
                         ),
                         decoration: new BoxDecoration (
@@ -41,7 +43,7 @@ class GroupListView extends StatelessWidget {
                           Expanded(
                             child: Text(
                               duas[index].name,
-                              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                              style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w500),
                               maxLines: 3,
                               textDirection: TextDirection.ltr,
                             ),
@@ -52,7 +54,12 @@ class GroupListView extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ContentScreen(gid: duas[index].id),
+                              builder: (context) => PageView.builder(
+                                controller: controller,
+                                itemBuilder: (BuildContext context, index) {
+                                  return ContentScreen(gid: duas[index].id);
+                                }, itemCount: duas.length,
+                              ),
                             )
                         );
                       },

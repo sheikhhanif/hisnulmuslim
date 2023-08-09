@@ -23,10 +23,8 @@ AppBarTheme appBarTheme() {
   return AppBarTheme(
     color: Colors.white,
     elevation: 1,
-    brightness: Brightness.light,
     iconTheme: IconThemeData(color: Colors.teal),
-    textTheme: TextTheme(
-      headline6: TextStyle(color: Colors.teal, fontSize: 18.5),
-    ),
+    titleTextStyle: TextStyle(
+      color: Colors.teal, fontSize: 18.5),
   );
 }

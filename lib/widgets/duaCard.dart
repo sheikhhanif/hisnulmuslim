@@ -48,21 +48,20 @@ class _ContentCardViewState extends State<ContentCardView> {
     var dualist = Provider.of<FavProvider>(context).duas;
 
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(3.0),
       child: Card(
-          elevation: 0.5,
+        margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 3),
+          elevation: 1,
           child: Column(
             children: [
               ListTile(
                 tileColor: Colors.grey.shade50,
                 leading: Container(
                   padding: EdgeInsets.all(10),
-                  child: new Text (
-                      "Dua\n${dua.id}",
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(
-                          color: Colors.black87
-                      )
+                  child: new Icon(
+                    Icons.api_outlined,
+                    color: Colors.black,
+
                   ),
                   decoration: new BoxDecoration (
                       shape: BoxShape.circle,
@@ -76,7 +75,7 @@ class _ContentCardViewState extends State<ContentCardView> {
 
                       child: Text(
                         dua.subtitle,
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                         maxLines: 5,
                         textDirection: TextDirection.ltr,
                       ),
@@ -87,11 +86,11 @@ class _ContentCardViewState extends State<ContentCardView> {
 
               ListTile(
                 title: Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(1.0),
                   child: Html(
                     data: dua.ar_dua, style: {
                     "body": Style(
-                        fontSize: FontSize(25),
+                        fontSize: FontSize(21.5),
                         direction: TextDirection.rtl,
                         fontFamily: 'Scheherazade',
                         fontWeight: FontWeight.w500,
@@ -108,11 +107,11 @@ class _ContentCardViewState extends State<ContentCardView> {
 
               ListTile(
                 title: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(1.0),
                   child: Html(
                     data: dua.en_trans, style: {
                     "body": Style(
-                      fontSize: FontSize(16),
+                      fontSize: FontSize(14.5),
                       direction: TextDirection.ltr,
                       color: Colors.black87,
                       textAlign: TextAlign.justify,
@@ -123,7 +122,7 @@ class _ContentCardViewState extends State<ContentCardView> {
               ),
               ListTile(
                 title: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(1.0),
                   child: Html(
                     data: dua.en_ref, style: {
                     "body": Style(
@@ -142,7 +141,7 @@ class _ContentCardViewState extends State<ContentCardView> {
                     IconButton(
                       icon: Icon(
                         Icons.ios_share,
-                        color: Colors.teal,
+                        color: Colors.blueGrey,
                       ),
                       alignment: Alignment.bottomLeft,
                       onPressed:(){
@@ -161,7 +160,7 @@ class _ContentCardViewState extends State<ContentCardView> {
                     IconButton(
                       icon: Icon(
                         dualist.contains(dua) ? Icons.favorite : Icons.favorite_border,
-                        color: dualist.contains(dua) ? Colors.teal : Colors.teal,
+                        color: dualist.contains(dua) ? Colors.blueGrey : Colors.blueGrey,
                       ),
                       onPressed:(){
                         if (dualist.contains(dua)) {
@@ -205,7 +204,7 @@ class _ContentCardViewState extends State<ContentCardView> {
     if (dua.audio !=""){
       return IconButton(
         icon: Icon(spl?Icons.pause: Icons.play_circle_outline_sharp,
-            color: Colors.teal),
+            color: Colors.blueGrey),
         onPressed: ()  async{
             if(spl){
               Provider.of<FavProvider>(context, listen: false).remove_id(dua.id);

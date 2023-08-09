@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hisnulmuslim/model/dua_group.dart';
-import 'package:hisnulmuslim/screens/search/search_screen.dart';
+import 'package:hisnulmuslim/screens/duaContent/duacontent_screen.dart';
 import 'package:hisnulmuslim/widgets/appbarview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hisnulmuslim/widgets/section_screen.dart';
+
+import '../../model/dua_details.dart';
+import '../duaContent/duas.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -23,7 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: BuildAppBar(title: 'Hisnul Muslim',),
     );
   }
-
 }
 
 class HomeBody extends StatelessWidget {
@@ -37,12 +39,16 @@ class HomeBody extends StatelessWidget {
           gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemBuilder: (context, position) {
+            final PageController controller = PageController(initialPage: position);
+
             var duas = duaData.where((item) => item.cid == categoryData[position].id).toList();
+            var allduas = duaContent.where((item) => item.gid == duaData[position].cid).toList();
+
             return Card(
-              shadowColor: Color.alphaBlend(Colors.green, Colors.teal),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
-              elevation: 0.5,
+              elevation: 1,
+              shadowColor: Colors.blueGrey,
               child: Center(
                 child: ListTile(
                   title: Center(
@@ -52,10 +58,9 @@ class HomeBody extends StatelessWidget {
                           flex: 30,
                           child: SvgPicture.asset(
                             categoryData[position].image,
-                            color: Colors.teal,
-                            width: 25.0,
-                            height: 25.0,
-
+                            color: Colors.blueGrey,
+                            width: 18.0,
+                            height: 18.0,
                           ),
                         ),
                         Expanded(
@@ -76,7 +81,13 @@ class HomeBody extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SectionScreen(duas: duas, title: categoryData[position].name),
+                          builder: (context) => Builder(
+                            builder: (context) {
+                             // return SectionScreen(duas: duas, title: categoryData[position].name);
+                              return DuaScreen(cid: position+1);
+
+                            }
+                          ),
                         )
                     );
                   },

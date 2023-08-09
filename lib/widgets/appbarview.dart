@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hisnulmuslim/screens/search/search_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 
 enum WhyFarther { about }
@@ -14,9 +15,9 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(8.0),
         child: Text(title,
-            style: TextStyle(
+            style: TextStyle( color: Colors.teal,
                 fontWeight: FontWeight.bold, letterSpacing: 2, wordSpacing: 1)),
       ),
       actions: [
@@ -60,6 +61,7 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
                     actions: [
                       TextButton(
                           child: const Text("Close", style: TextStyle(color: Colors.teal),),
+                        autofocus: true,
                         onPressed: (){
                             Navigator.of(context).pop();
                         },
@@ -69,18 +71,8 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
             },
           ),
         ),
-        new PopupMenuItem(child: ListTile(title: Text('Website'),
-        onTap: ()async{
-          Navigator.of(context).pop();
-          await launch('https://minbarapps.com');
-        },
-        )),
-        new PopupMenuItem(child: ListTile(title: Text('Facebook'),
-        onTap: () async{
-          Navigator.of(context).pop();
-          await launch('https://facebook.com/minbarapps');
-        },
-        )),
+
+
       ],
     );
   }
@@ -105,11 +97,11 @@ class BuildAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),),
 
           InkWell(
-            child: Text("For any issues, please feel free to contact: contactminbarapps@gmail.com", textAlign: TextAlign.left, style: TextStyle(
+            child: Text("For any issues, please feel free to contact: hanifiium@gmail.com", textAlign: TextAlign.left, style: TextStyle(
               fontSize: 15, color: Colors.black,
             ),),
             onTap: ()async{
-              await launch('mailto:contactminbarapps@gmail.com');
+              await launchUrlString('mailto:hanifiium@gmail.com');
             },
           ),
         ],

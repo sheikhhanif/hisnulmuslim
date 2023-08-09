@@ -66,7 +66,7 @@ class _MainScreenState extends State<MainScreen> {
 
   BottomNavigationBar buildBottomNavigationBar() {
     return BottomNavigationBar(
-      fixedColor: Colors.teal,
+      fixedColor: Colors.blueGrey,
       selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
       type: BottomNavigationBarType.fixed,
       currentIndex: _selectedIndex,
