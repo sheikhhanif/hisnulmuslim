@@ -14,7 +14,7 @@ class DuaScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Dua Category : '+ categoryData[cid-1].name,
             style: TextStyle
-              (fontWeight: FontWeight.bold, fontSize: 15, letterSpacing: 1, ),
+              (fontWeight: FontWeight.bold, fontSize: 17, letterSpacing: 1, ),
           textAlign: TextAlign.left,
         ),
       ),

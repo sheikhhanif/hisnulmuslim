@@ -1,10 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hisnulmuslim">
     <application
-        android:label="Hisnul Muslim | Dua and Azkar"
+        android:label="Hisnul Muslim"
         android:icon="@mipmap/ic_launcher">
+        android:name="${applicationName}
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

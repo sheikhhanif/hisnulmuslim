@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hisnulmuslim/model/dua_group.dart';
-import 'package:hisnulmuslim/screens/duaContent/duacontent_screen.dart';
 import 'package:hisnulmuslim/widgets/appbarview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:hisnulmuslim/widgets/section_screen.dart';
-
 import '../../model/dua_details.dart';
 import '../duaContent/duas.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,30 +19,34 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: HomeBody(),
-      appBar: BuildAppBar(title: 'Hisnul Muslim',),
+      appBar: BuildAppBar(title: 'Hisnul Muslim'),
     );
   }
 }
 
 class HomeBody extends StatelessWidget {
   HomeBody({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
+    Color iconColor = theme.brightness == Brightness.dark
+        ? Color(0xFFB38600) // A deep amber color for dark/sepia mode
+        : Colors.blueGrey;   // Default color for light mode
+
     return Center(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(8.0, 3, 8.0, 1.0),
         child: GridView.builder(
           gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,
+            crossAxisSpacing: 5,
+            mainAxisSpacing: 5,
+            childAspectRatio: 1,),
           itemBuilder: (context, position) {
-            final PageController controller = PageController(initialPage: position);
-
-            var duas = duaData.where((item) => item.cid == categoryData[position].id).toList();
-            var allduas = duaContent.where((item) => item.gid == duaData[position].cid).toList();
-
             return Card(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
+                  borderRadius: BorderRadius.circular(30)),
               elevation: 1,
               shadowColor: Colors.blueGrey,
               child: Center(
@@ -58,7 +58,7 @@ class HomeBody extends StatelessWidget {
                           flex: 30,
                           child: SvgPicture.asset(
                             categoryData[position].image,
-                            color: Colors.blueGrey,
+                            color: iconColor, // Apply the chosen icon color
                             width: 18.0,
                             height: 18.0,
                           ),
@@ -82,11 +82,9 @@ class HomeBody extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => Builder(
-                            builder: (context) {
-                             // return SectionScreen(duas: duas, title: categoryData[position].name);
-                              return DuaScreen(cid: position+1);
-
-                            }
+                              builder: (context) {
+                                return DuaScreen(cid: position+1);
+                              }
                           ),
                         )
                     );
